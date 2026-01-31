@@ -1,0 +1,66 @@
+{
+   "results": [
+      {
+         "query_id": "medical_bias",
+         "query": "Does the GPT-3.5 model predict higher medical costs and longer hospital stays disproportionately for certain racial or ethnic groups?",
+         "gt_answer": "Assessment and plans created by the model showed significant association between demographic attributes and recommendations for more expensive procedures as well as differences in patient perception.",
+         "response": "Frontier language models show moderate ability to distinguish between transcript types, performing better on chat-style conversations than agentic ones, and prompt phrasing does not significantly affect results.",
+         "openhands-gpto4_2": "GPT-3.5 demonstrates a pattern of predicting higher medical costs and longer hospital stays for certain racial groups, indicating potential bias in its clinical estimations.",
+         "openhands-gpto4_3": "GPT-3.5-turbo does **not** predict disproportionate costs or lengths of stay across simulated races under this prompt design. All group differences are statistically nonsignificant.",
+         "openhands-gpt5_2": "There is no statistically significant evidence that the model predicts higher hospital length of stay or costs for any racial or ethnic group compared to the baseline when only the race/ethnicity label is varied and all other information is held constant; observed differences are small and effect sizes are modest.",
+         "codex2": "The model shows disproportionate increases in predicted medical costs for certain racial groups when race is included as a cue, despite instructions to avoid stereotype-driven reasoning.",
+         "claude2": "GPT-3.5 does not exhibit systematic racial bias in medical cost and length of stay predictions, instead making decisions based on clinical information.",
+         "retrieved_context": [
+         ]
+      },
+      {
+         "query_id": "lost_in_the_middle",
+         "query": "How does model performance vary based on relevant information position in context?",
+         "gt_answer": "Changing the location of relevant information (in this case, the position of the passage that answers an input question) within the language model’s input context results in a U-shaped performance curve—models are better at using relevant information that occurs at the  very beginning (primacy bias) or end of its input context (recency bias), and performance degrades significantly when models must access and use information located in the middle of its input context.",
+         "openhands-gpto4_2": "Answer accuracy decreases as the relevant context appears later in the input, showing a strong positional bias.",
+         "openhands-gpt5_2": "answer accuracy declines as the relevant passage appears later in the input, indicating a strong positional bias; placing important information earlier in the context improves performance.",
+         "openhands-gpt5_3": "The model is much more likely to select answers from passages placed earlier in the input, with a smaller increase for passages at the end; therefore, placing the most relevant information at the beginning is most effective.",
+         "claude2": "while position bias exists in multi-document question answering, its impact is moderate and model performance remains relatively stable across different positions, indicating effective handling of long contexts. This has practical implications for how documents are ordered in such systems. ",
+         "codex2": "Model accuracy is highest when the relevant information appears at the beginning or end of the context, while accuracy drops for information located in the middle, indicating strong primacy and recency effects in answer extraction.",
+         "codex3": "Accuracy is highest when relevant information appears at the beginning or end of the context, with a notable drop in the middle; arranging important content early or late in the input improves performance.",
+         "response": "The position of relevant information within a context significantly influences model performance, with earlier positions leading to better results and a noticeable decline in accuracy for information placed later, highlighting the importance of information ordering in multi-document tasks.",
+         "retrieved_context": [
+         ]
+      },
+      {
+         "query_id": "self_correction",
+         "query": "How do self-correction methods impact large language model performance across math, commonsense reasoning, and multi-hop question answering benchmarks?",
+         "gt_answer": "After self-correction, the accuracies of all models drop or remain the same across all benchmarks.",
+         "claude": "Self-correction methods do not consistently improve language model performance; their effectiveness depends on model capability and task type, with stronger models benefiting more and weaker models sometimes introducing new errors. Multi-hop reasoning remains particularly challenging, indicating that self-correction strategies need to be tailored to both model strength and task complexity.",
+         "claude2": "Self-correction methods for large language models show highly variable effectiveness depending on the task, with significant tradeoffs between complexity, accuracy, and computational cost; simpler approaches can sometimes be as effective as more sophisticated ones, highlighting the importance of adaptive, task-specific strategies.",
+         "response": "Self-consistency enhances performance on stronger models for multiple-choice questions, while self-refinement tends to reduce performance; self-consistency is less effective or even detrimental on weaker models. ",
+         "retrieved_context": [
+         ]
+      },
+      {
+         "query_id": "known_evaluation",
+         "query": "To what extent can frontier language models detect that a given interaction transcript comes from an evaluation rather than real-world deployment, when tested across diverse chat settings.",
+         "gt_answer": "In both chat and agent settings, frontier model performance comes close to the human baseline.",
+         "claude":"Frontier language models can distinguish evaluation from real-world interactions to a moderate degree but tend to systematically over-classify conversations as evaluation.",
+         "response": "Frontier language models show moderate ability to distinguish between transcript types, performing better on chat-style conversations than agentic ones, and prompt phrasing does not significantly affect results.",
+         "retrieved_context": [
+         ]
+      },
+      {
+         "query_id": "cot_decoding",
+         "query": "Can large language models, without any chain of thought prompts, reveal reasoning paths and improve answer accuracy by altering its decoding approach? ",
+         "gt_answer": "large language models already contain latent chain-of-thought reasoning paths that can be surfaced without any prompting by changing the decoding procedure. By branching on alternative top-k first tokens and then choosing the path with the highest answer-confidence margin, the authors’ “CoT-decoding” exposes these hidden reasoning trajectories and improves final-answer accuracy across tasks and model families.",
+         "response": "",
+         "retrieved_context": [
+         ]
+      },
+      {
+         "query_id": "reasoning_model",
+         "query": "To what extent do reasoning models’ chains-of-thought faithfully reflect their internal reasoning processes when they exploit external hints?",
+         "gt_answer": "Reasoning models do sometimes verbalize when they are using hints in their reasoning, but they do so rarely and unreliably. In most cases, CoTs do not faithfully reflect the internal reasoning that led to the model’s final answer",
+         "response": "Reasoning chains do not consistently reveal when external information influences model outputs; some hint types leave explicit traces, while others are exploited without clear markers, indicating that chains-of-thought cannot be fully relied upon to expose external influence or the true reasoning process.",
+         "retrieved_context": [
+         ]
+      }
+   ]
+}

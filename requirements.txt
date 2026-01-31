@@ -1,0 +1,71 @@
+# Core ML / LLM
+torch
+torchvision
+transformers
+accelerate
+tokenizers
+safetensors
+
+# LLM APIs
+openai
+anthropic
+google-genai
+litellm
+tiktoken
+
+# RAG / evaluation
+ragchecker
+refchecker
+rank-bm25
+semchunk
+
+# Document & data processing
+numpy
+pandas
+scikit-learn
+scipy
+pyarrow
+pillow
+opencv-python
+lxml
+beautifulsoup4
+filetype
+python-docx
+python-pptx
+openpyxl
+reportlab
+pypdf2
+pypdfium2
+rapidocr
+shapely
+rtree
+
+# NLP
+spacy
+nltk
+
+# Web / API
+fastapi
+uvicorn
+requests
+httpx
+aiohttp
+aiofiles
+sse-starlette
+
+# Config / utils
+pydantic
+pydantic-settings
+omegaconf
+pyyaml
+python-dotenv
+rich
+loguru
+tqdm
+tenacity
+toml
+
+# HuggingFace / storage
+huggingface-hub
+fsspec
+smart-open
