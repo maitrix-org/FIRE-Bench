@@ -1,4 +1,4 @@
-.env
+env_template
 /.claude
 /log
 /results

@@ -74,24 +74,13 @@ def main():
     parser.add_argument("--AGENT_ID", type=str, required=True, help="Which agent to run")
     parser.add_argument("--TASK_ID", type=str, nargs="+", required=True, help="List of research task IDs to run")
     parser.add_argument("--LLM_MODEL", type=str, required=True, help="Which LLM model to use")
-    parser.add_argument("--LLM_API_KEY", type=str, default=None, help="API key for the LLM (defaults to OPENAI_API_KEY or ANTHROPIC_API_KEY env var based on model)")
     parser.add_argument("--RUN_TIMES", type=int, default=1, help="Number of times to run each task")
     parser.add_argument("--MAX_PARALLEL", type=int, default=3, help="Maximum number of parallel processes")
 
     args = parser.parse_args()
 
-    if args.LLM_API_KEY:
-        api_key = args.LLM_API_KEY
-    elif args.LLM_MODEL.startswith("claude"):
-        api_key = os.environ.get("ANTHROPIC_API_KEY", "")
-    else:
-        api_key = os.environ.get("OPENAI_API_KEY", "")
-    if not api_key:
-        parser.error("No API key provided. Set OPENAI_API_KEY or ANTHROPIC_API_KEY env var, or pass --LLM_API_KEY.")
-
     env_base = os.environ.copy()
     env_base["AGENT_ID"] = args.AGENT_ID
-    env_base["LLM_API_KEY"] = api_key
     env_base["LLM_MODEL"] = args.LLM_MODEL
 
     Main_Path = Path.cwd()

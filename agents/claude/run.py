@@ -3,6 +3,10 @@ import os
 import time
 from pathlib import Path
 import shutil
+from dotenv import load_dotenv
+
+# Load environment variables from .env
+load_dotenv()
 
 # Repo path
 Main_Path = Path.cwd()
@@ -54,14 +58,18 @@ def main():
     with open(instruction_file, "r") as f:
         instruction_text = f.read().strip()
 
-    # Write .env into sandbox so utils/llm_inference.py can load API keys
-    api_key = os.environ.get("LLM_API_KEY", "")
+    # Load API keys and settings from .env
+    use_subscription = os.environ.get("USE_SUBSCRIPTION", "0") == "1"
+    openai_key = os.environ.get("OPENAI_API_KEY", "")
+    anthropic_key = os.environ.get("ANTHROPIC_API_KEY", "")
     google_key = os.environ.get("GOOGLE_API_KEY", "")
     hf_token = os.environ.get("HF_TOKEN", "")
+
+    # Write .env into sandbox so utils/llm_inference.py can load API keys
+    # Note: Sandbox always gets API keys for running experiments, regardless of subscription mode
     with open(sandbox_volume_path / ".env", "w") as f:
-        f.write(f"OPENAI_API_KEY={api_key}\n")
-        f.write(f"ANTHROPIC_API_KEY={api_key}\n")
-        f.write(f"CLAUDE_API_KEY={api_key}\n")
+        f.write(f"OPENAI_API_KEY={openai_key}\n")
+        f.write(f"ANTHROPIC_API_KEY={anthropic_key}\n")
         f.write(f"GOOGLE_API_KEY={google_key}\n")
         f.write(f"HF_TOKEN={hf_token}\n")
 
@@ -77,10 +85,20 @@ def main():
         "--dangerously-skip-permissions"
     ]
 
+    # Prepare environment for Claude CLI
+    env = os.environ.copy()
+    if use_subscription:
+        # Remove ANTHROPIC_API_KEY from Claude CLI's environment so it uses subscription
+        # Sandbox experiments still have access via the .env file we wrote above
+        env.pop("ANTHROPIC_API_KEY", None)
+        print(f"Running Claude Code in subscription mode (experiments use API key from sandbox .env)")
+    else:
+        print(f"Running Claude Code with API key")
+
 
     # Run the Claude Code command and log output
     with open(log_file, "a") as f:
-        process = subprocess.run(cmd, cwd=sandbox_volume_path, stdout=f, stderr=subprocess.STDOUT)
+        process = subprocess.run(cmd, cwd=sandbox_volume_path, env=env, stdout=f, stderr=subprocess.STDOUT)
 
     print(f"Run complete. Logs saved to {log_file}")
 

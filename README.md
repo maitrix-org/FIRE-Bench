@@ -1,4 +1,85 @@
-# FIRE-Bench
+<h3 align="center">
+  <strong>🔥 FIRE-Bench: Evaluating Agents on the Rediscovery of Scientific Insights</strong>
+</h3>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2602.02905">
+    <img src="https://img.shields.io/badge/arXiv-2602.02905-red?style=flat-square&logo=arxiv" alt="arXiv">
+  </a>
+  &nbsp;
+  <a href="https://github.com/maitrix-org/FIRE-Bench">
+    <img src="https://img.shields.io/badge/GitHub-Project-181717?style=flat-square&logo=github" alt="GitHub">
+  </a>
+  &nbsp;
+  <a href="https://firebench.github.io/">
+    <img src="https://img.shields.io/badge/🔥-Website-orange?style=flat-square" alt="Website">
+  </a>
+</p>
+
+
+FIRE-Bench is constructed through **research-problem decomposition**, a process that transforms high-quality empirical analysis papers into **verifiable benchmark tasks**. This approach balances:
+
+- **Exploratory freedom** (avoiding tasks that are too broad to benchmark), and  
+- **Empirical verifiability** (avoiding tasks that are too narrow to allow genuine exploration).
+
+We evaluate agent performance through **claim-level analysis**. Both agent conclusions **C_agent** and ground-truth conclusions **C_gt** are decomposed into **atomic, verifiable claims**. Overall performance is measured using **Precision**, **Recall**, and the **F_1** score.
+
+
+## Workflow and Results
+<table>
+  <tr>
+    <td style="width:50%; text-align:center; vertical-align:top;">
+      <img src="resources/workflow.png" width="100%" />
+    </td>
+    <td style="width:50%; vertical-align:top;">
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Agent</th>
+      <th>Prec.</th>
+      <th>Recall</th>
+      <th>F<sub>1</sub> Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>CC<sub>Sonnet-4</sub></td>
+      <td><b>52.1</b><sub>±26.1</sub></td>
+      <td>48.3<sub>±24.8</sub></td>
+      <td><b>46.7</b><sub>±23.4</sub></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>CX<sub>gpt-5-med</sub></td>
+      <td>44.8<sub>±24.1</sub></td>
+      <td><b>49.0</b><sub>±28.5</sub></td>
+      <td>41.9<sub>±25.4</sub></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>OH<sub>gpt-5</sub></td>
+      <td>41.7<sub>±22.7</sub></td>
+      <td>41.4<sub>±24.9</sub></td>
+      <td>37.9<sub>±23.0</sub></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>OH<sub>o4-mini</sub></td>
+      <td>36.8<sub>±18.5</sub></td>
+      <td>36.6<sub>±19.2</sub></td>
+      <td>31.9<sub>±17.6</sub></td>
+    </tr>
+  </tbody>
+</table>
+
+  </td>
+  </tr>
+</table>
+
+
 
 ## Setup
 
@@ -18,7 +99,8 @@ Create a `.env` file:
 OPENAI_API_KEY=
 GOOGLE_API_KEY=
 HF_TOKEN=
-CLAUDE_API_KEY=
+ANTHROPIC_API_KEY=
+USE_SUBSCRIPTION=1 (mark this as 1 if you want to use Claude Code subscription, 0 if using API key; note that some benchmark papers running on Claude models still require ANTHROPIC_API_KEY)
 ```
 
 ### Agent Dependencies
@@ -31,7 +113,7 @@ CLAUDE_API_KEY=
 
 ### 1. Download Data for Specific Benchmark
 
-Some datasets in certain benchmarks are too big or cannot be directly loaded from huggingface. Instructions of getting them are provided in `dataset.txt` in the benchmark folder.
+Some datasets in certain benchmarks are too big or cannot be directly loaded from huggingface. Instructions of getting them are provided in `dataset.txt` in the benchmark folder. Or you can download the complete benchmark folder with data using [this link](https://drive.google.com/file/d/128Tf5N0CNrfPzk9OYKxlbK_oNQnPHOGA/view?usp=sharing)
 
 ### 2. Run Experiments
 
@@ -66,10 +148,3 @@ bash run_eval.sh --agents codex --models gpt-5 --tasks rational --timestamp 2025
 - `--tasks`: task name or `all`
 - `--timestamp`: (optional) evaluate a specific run by timestamp
 
-## Status
-
-| Agent | Status |
-|-------|--------|
-| Codex | Ready |
-| Claude Code | Not examined (no API credit) |
-| OpenHands | Ready |

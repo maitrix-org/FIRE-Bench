@@ -1,16 +1,66 @@
 #!/bin/bash
+# =====================================================
+# Run experiment script
+# Usage:
+#   bash run_experiment.sh [--agents ...] [--models ...] [--tasks ...] [--run_times ...]
+# Example:
+#   bash run_experiment.sh --agents openhands --models gpt-5 --tasks to_cot_or_not
+#   bash run_experiment.sh --agents "openhands codex" --models "gpt-5 claude-sonnet-4-20250514" --tasks "to_cot_or_not rational"
+# =====================================================
+
+# Load environment variables from .env
+if [ -f .env ]; then
+    set -a
+    source .env
+    set +a
+fi
+
+# Exit immediately on error
+set -e
 
 # ==============================
-# Agent / Task / Model lists
+# Default arguments
 # ==============================
-AGENT_IDS=("openhands")      # example agents
-TASK_IDS=("to_cot_or_not")  # example tasks
-LLM_MODELS=("gpt-5")  # example models
+DEFAULT_AGENTS="openhands"      # example agents
+DEFAULT_TASKS="all"   # example tasks
+DEFAULT_MODELS="gpt-5"          # example models
+DEFAULT_RUN_TIMES=1
 
 # ==============================
-# API keys loaded from environment
-# (set OPENAI_API_KEY and/or ANTHROPIC_API_KEY before running)
+# Parse CLI arguments (optional overrides)
 # ==============================
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        --agents) AGENTS="$2"; shift ;;
+        --tasks) TASKS="$2"; shift ;;
+        --models) MODELS="$2"; shift ;;
+        --run_times) RUN_TIMES="$2"; shift ;;
+        *) echo "[!] Unknown parameter: $1"; exit 1 ;;
+    esac
+    shift
+done
+
+# Fallback to defaults if unset
+AGENTS=${AGENTS:-$DEFAULT_AGENTS}
+TASKS=${TASKS:-$DEFAULT_TASKS}
+MODELS=${MODELS:-$DEFAULT_MODELS}
+RUN_TIMES=${RUN_TIMES:-$DEFAULT_RUN_TIMES}
+
+# Convert space-separated strings to arrays
+IFS=' ' read -ra AGENT_IDS <<< "$AGENTS"
+IFS=' ' read -ra TASK_IDS <<< "$TASKS"
+IFS=' ' read -ra LLM_MODELS <<< "$MODELS"
+
+# Display configuration summary
+echo "===================================="
+echo "Starting Experiment"
+echo "------------------------------------"
+echo "Agents:    ${AGENT_IDS[*]}"
+echo "Tasks:     ${TASK_IDS[*]}"
+echo "Models:    ${LLM_MODELS[*]}"
+echo "Run Times: $RUN_TIMES"
+echo "===================================="
+echo
 
 # ==============================
 # Run all combinations
@@ -28,7 +78,7 @@ for agent in "${AGENT_IDS[@]}"; do
         --AGENT_ID "$agent" \
         --TASK_ID "$task" \
         --LLM_MODEL "$model" \
-        --RUN_TIMES 1
+        --RUN_TIMES "$RUN_TIMES"
 
     done
   done
