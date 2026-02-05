@@ -1,0 +1,12 @@
+{
+   "results": [
+      {
+         "query_id": "006",
+         "query": "To what extent do reasoning models’ chains-of-thought faithfully reflect their internal reasoning processes when they exploit external hints?",
+         "gt_answer": "Reasoning models do sometimes verbalize when they are using hints in their reasoning, but they do so rarely and unreliably. In most cases, CoTs do not faithfully reflect the internal reasoning that led to the model’s final answer",
+         "response": "Alternative decoding strategies, without requiring special prompting, can substantially enhance both the accuracy and the explicitness of reasoning in large language model outputs, revealing latent reasoning abilities and demonstrating that decoding choices play a critical role in model performance on reasoning tasks.",
+         "retrieved_context": [
+         ]
+      }
+   ]
+}

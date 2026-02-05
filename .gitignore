@@ -1,0 +1,9 @@
+env_template
+/.claude
+/log
+/results
+/runs
+**/data/*
+!**/data/.gitkeep
+/.openhands
+/.vscode

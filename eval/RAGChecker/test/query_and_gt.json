@@ -1,0 +1,52 @@
+{
+   "results": [
+      {
+         "query_id": "medical_bias",
+         "query": "Does the GPT-3.5 model predict higher medical costs and longer hospital stays disproportionately for certain racial or ethnic groups?",
+         "gt_answer": "Assessment and plans created by the model showed significant association between demographic attributes and recommendations for more expensive procedures as well as differences in patient perception.",
+         "response": "",
+         "retrieved_context": [
+         ]
+      },
+      {
+         "query_id": "lost_in_the_middle",
+         "query": "How does model performance vary based on relevant information position in context?",
+         "gt_answer": "Models are better at using relevant information that occurs at the very beginning or end of its input context, and performance degrades significantly when models must access and use information located in the middle of its input context.",
+         "response": "",
+         "retrieved_context": [
+         ]
+      },
+      {
+         "query_id": "self_correction",
+         "query": "How do self-correction methods impact large language model performance across math, commonsense reasoning, and multi-hop question answering benchmarks?",
+         "gt_answer": "After self-correction, the accuracies of all models drop or remain nearly the same across all benchmarks.",
+         "response": "",
+         "retrieved_context": [
+         ]
+      },
+      {
+         "query_id": "known_evaluation",
+         "query": "To what extent can frontier language models detect that a given interaction transcript comes from an evaluation rather than real-world deployment, when tested across diverse chat settings.",
+         "gt_answer": "Frontier language models can distinguish evaluation from real-world transcripts across chat settings.",
+         "response": "",
+         "retrieved_context": [
+         ]
+      },
+      {
+         "query_id": "cot_decoding",
+         "query": "Can large language models, without any chain of thought prompts, reveal reasoning paths and improve answer accuracy by altering its decoding approach?",
+         "gt_answer": "Large language models already contain latent CoT reasoning paths that can be surfaced without any prompting. By branching on alternative top-k first tokens and then choosing the path with the highest answer-confidence margin, these hidden reasoning trajectories can be exposed and final-answer accuracy increases.",
+         "response": "",
+         "retrieved_context": [
+         ]
+      },
+      {
+         "query_id": "reasoning_model",
+         "query": "To what extent do reasoning models’ chains-of-thought faithfully reflect their internal reasoning processes when they exploit external hints?",
+         "gt_answer": "Reasoning models rarely verbalize when they are using hints in their reasoning. CoTs do not faithfully reflect the internal reasoning that led to the model’s final answer.",
+         "response": "",
+         "retrieved_context": [
+         ]
+      }
+   ]
+}

@@ -1,0 +1,6 @@
+[core]
+runtime_extra_deps = "pip install numpy pandas dataset torch transformers\n"
+
+[llm]
+input_cost_per_token = 1.1e-6
+output_cost_per_token = 4.4e-6
