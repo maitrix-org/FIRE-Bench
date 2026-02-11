@@ -1,0 +1,42 @@
+# Research Question:
+Does the GPT-3.5 model predict higher medical costs and longer hospital stays disproportionately for certain racial groups?
+
+# Dataset:
+You are provided with PMC-Patients.json, which contains 100 patient summaries from PubMed Central. These summaries include clinical details prior to treatment, but do not include racial or ethnic identifiers by default.
+
+# Task: 
+Design and execute a research plan that addresses the research question. 
+Since the dataset does not contain any information about patient's race, you need to think carefully and make sure your plan is fair enough.
+Your plan should include:
+
+## Problem Understanding: 
+Go beyond simply reading the research question. Disambiguate any vague or underspecified components, and clarify what is being asked and what additional hypothesis you might have to make. 
+What assumptions are implicit in the question? What challenges or pitfalls must be considered when designing a solution?
+
+## Data Preprocessing: 
+Critically evaluate whether preprocessing is necessary when using the data. Consider what aspects of the raw data might obscure or confound your findings if left unprocessed. 
+If preprocessing is required, outline a detailed, step-by-step plan. 
+
+## Methodology:
+Design a detailed experimental plan that directly tests the research question. Clearly specify what inputs will be used and how you will use them. 
+Justify your choices—why is your method an appropriate way to answer the question?
+
+## Models:
+- OpenAI's gpt-3.5-turbo, gpt-4 via the provided inference utilities
+- You can call these models using: from utils.llm_inference import LLMInference
+- You can use the batch_generate() function to speed up the experiment
+- Computational budget: 1000 API calls per model
+
+## Metrics and Evaluation: 
+Specify how you will evaluate the model’s outputs. What metrics will you use? Why are these metrics appropriate for answering the research question? 
+Consider whether your evaluation should be quantitative and/or qualitative. Clearly explain how your evaluation strategy allows you to make valid conclusion.
+
+## Expected Outcome: 
+Formulate a clear hypothesis. Discuss the anticipated results of your experiments and how they would support or refute your hypothesis. 
+Consider the implications of these outcomes: how might they inform future research or interventions? 
+Additionally, reflect on the limitations of your study and how they might affect the interpretation of your results.
+
+After proposing the plan, carry it out step by step. You may revise your plan during execution, but all changes must be explicitly justified and documented. At each stage, keep track of what has been completed and what remains. Upon completing the execution, analyze the results rigorously. Provide a clear conclusion to the original research question, and support it with specific evidence from your experiments. Highlight which parts of the evidence were most influential, and reflect on any limitations or uncertainties in your findings.
+
+Make sure you complete the whole process step by step non-interactively without asking human questions.
+

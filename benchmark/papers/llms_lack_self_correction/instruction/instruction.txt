@@ -1,0 +1,40 @@
+You are a research agent. Conduct research and experiment about the question: "How do self-correction methods impact large language model performance across math, commonsense reasoning, and multi-hop question answering benchmarks?"
+You should prompt the models to undergo two rounds of self-correction.
+
+You have access to the following resources:
+
+Models:
+- OpenAI's gpt-3.5-turbo and gpt-4
+- Load with HuggingFace: meta-llama/Llama-2-70b
+- Use a temperature of 1
+- You can call these models using: from utils.llm_inference import LLMInference
+- API key is provided with the LLMInference initialization function
+- You can use the batch_generate() function to speed up the experiment
+- Computational budget: 300 API calls per model
+
+Datasets:
+- GSM8K (grade school math word problems): /data/gsm8k/
+You can use the following code to load the dataset:
+```python
+from datasets import load_dataset
+ds = load_dataset("openai/gsm8k", "main")
+
+- CommonSenseQA (commonsense multi-choice QA): /data/commonsenseqa/
+You can use the following code to load the dataset:
+```python
+from datasets import load_dataset
+ds = load_dataset("tau/commonsense_qa")
+
+- HotpotQA (open-domain multi-hop QA): /data/hotpotqa/
+You can use the following code to load the dataset:
+```python
+from datasets import load_dataset
+
+ds = load_dataset("hotpotqa/hotpot_qa", "distractor")
+ds = load_dataset("hotpotqa/hotpot_qa", "fullwiki")
+
+
+Experimental constraints:
+- Evaluate using the Exact Match accuracy metric
+
+Please design and execute **FULL** experiments to investigate this research question. Document your experimental plan, run your experiments, and provide conclusions at different levels of detail.

@@ -7,32 +7,32 @@ from dotenv import load_dotenv
 
 
 query = {
-    "medical_bias": "Does the GPT-3.5 model predict higher medical costs and longer hospital stays disproportionately for certain racial or ethnic groups?",
+    "llm_racial_bias_in_medicine": "Does the GPT-3.5 model predict higher medical costs and longer hospital stays disproportionately for certain racial or ethnic groups?",
     "lost_in_the_middle": "How does model performance vary based on relevant information position in context?",
-    "self_correction": "How do self-correction methods impact large language model performance across math, commonsense reasoning, and multi-hop question answering benchmarks?",
-    "known_evaluation": "Can language models detect that a given interaction transcript comes from an evaluation rather than real-world deployment?",
-    "cot_decoding": "Can large language models, without any chain of thought prompts, reveal reasoning paths and improve answer accuracy by altering its decoding approach?",
-    "reasoning_model": "To what extent do reasoning models’ chains-of-thought faithfully reflect their internal reasoning processes when they exploit external hints?",
-    "rational":"Do large language models accurately capture the irrational aspects of human decision￾making, or do they instead assume that people behave according to rational choice theories (such as expected value theory)",
-    "to_cot_or_not" :"How much performance improvement does Chain-of-Thought (CoT) prompting provide over Direct Answer prompting across different reasoning categories (Commonsense, Knowledge, Symbolic, Mathematical, Soft Reasoning), and which categories show statistically signficant gains?",
-    "uncertainty_instruction_following":"How effectively can large language models (LLMs) estimate their uncertainty when following user instructions, and how can this ability be systematically evaluated in a controlled setting?",
-    "fractal_complexities":"When and why do LLMs deviate from the narrow fractal parameter range characteristic of natural language, as visualized by Holder and Hurst exponents?",
-    "consistent_values":"Do large language models exhibit the same value structure as humans, including the ranking of values and the correlations between values, and how does this depend on the way the model is prompted?"
+    "llms_lack_self_correction": "How do self-correction methods impact large language model performance across math, commonsense reasoning, and multi-hop question answering benchmarks?",
+    "awareness_detection": "Can language models detect that a given interaction transcript comes from an evaluation rather than real-world deployment?",
+    "cot_without_prompting": "Can large language models, without any chain of thought prompts, reveal reasoning paths and improve answer accuracy by altering its decoding approach?",
+    "cot_faithfulness_gaps": "To what extent do reasoning models’ chains-of-thought faithfully reflect their internal reasoning processes when they exploit external hints?",
+    "llms_assume_rationality":"Do large language models accurately capture the irrational aspects of human decision￾making, or do they instead assume that people behave according to rational choice theories (such as expected value theory)",
+    "to_cot_or_not_to_cot" :"How much performance improvement does Chain-of-Thought (CoT) prompting provide over Direct Answer prompting across different reasoning categories (Commonsense, Knowledge, Symbolic, Mathematical, Soft Reasoning), and which categories show statistically signficant gains?",
+    "uncertainty_in_instruction_following":"How effectively can large language models (LLMs) estimate their uncertainty when following user instructions, and how can this ability be systematically evaluated in a controlled setting?",
+    "fractal_complexity_of_language":"When and why do LLMs deviate from the narrow fractal parameter range characteristic of natural language, as visualized by Holder and Hurst exponents?",
+    "llm_value_consistency":"Do large language models exhibit the same value structure as humans, including the ranking of values and the correlations between values, and how does this depend on the way the model is prompted?"
 }
 
 
 gt = {
-    "medical_bias": "Assessment and plans created by the model showed significant association between demographic attributes and recommendations for more expensive procedures as well as differences in patient perception.",
+    "llm_racial_bias_in_medicine": "Assessment and plans created by the model showed significant association between demographic attributes and recommendations for more expensive procedures as well as differences in patient perception.",
     "lost_in_the_middle": "Models are better at using relevant information that occurs at the very beginning or end of its input context, and performance degrades significantly when models must access and use information located in the middle of its input context.",
-    "self_correction": "After self-correction, the accuracies of all models drop or remain nearly the same across all three benchmarks.",
-    "known_evaluation": "Language models can distinguish evaluation from real-world transcripts.",
-    "reasoning_model": "Reasoning models rarely verbalize when they are using hints in their reasoning. CoTs do not faithfully reflect the internal reasoning that led to the model’s final answer.",
-    "cot_decoding": "Large language models already contain latent CoT reasoning paths that can be surfaced without any prompting. By branching on alternative top-k first tokens and then choosing the path with the highest answer-confidence margin, these hidden reasoning trajectories can be exposed and final-answer accuracy increases.",
-    "to_cot_or_not": "Chain-of-Thought achieves performance gain on math and formal logic. CoT does not achieve statistically significant performance gain, sometimes even has slight loss, in other and most fields.",
-    "rational": "LLMs struggle to predict or simulate human behavior in a classic risky choice setting, assuming that people make decisions more rationally than we actually do. LLMs also assume people act rationally when reasoning backwards from observed actions to internal utilities, aligning with how humans make inferences about others' choices",
-    "uncertainty_instruction_following": "Verbalized self-evaluation methods outperform logit-based approaches in Controlled-Easy tasks, while internal model states provide more reliable uncertainty signals in both Controlled-Easy and Realistic settings. All methods struggle with more complex tasks in ControlledHard",
-    "fractal_complexities": "Various strategies, such as the decoding temperature and prompting method, can impact fractal parameters even when log-perplexity scores seem to be unaffected.\n For pretrained models, larger architectures are more effective at capturing such fractal properties.\n With instruction-tuned models, the similarity to human language does not improve monotonically as the amount of contextual information in the prompt increases.\n The Hurst parameter emerged as a strong predictor of quality in generated texts, among other significant findings.",
-    "consistent_values": "Using the Basic prompt, LLM's answers show variance across different generated personas, and show internally consistent outputs. These results suggest that LLMs cannot be treated as individuals holding a coherent set of value priorities. Prompts that endow the LLM with a personality improved the consistency of each specific value profile. However, with targeted prompt, LLM can be guided to display corresponding persona."
+    "llms_lack_self_correction": "After self-correction, the accuracies of all models drop or remain nearly the same across all three benchmarks.",
+    "awareness_detection": "Language models can distinguish evaluation from real-world transcripts.",
+    "cot_faithfulness_gaps": "Reasoning models rarely verbalize when they are using hints in their reasoning. CoTs do not faithfully reflect the internal reasoning that led to the model’s final answer.",
+    "cot_without_prompting": "Large language models already contain latent CoT reasoning paths that can be surfaced without any prompting. By branching on alternative top-k first tokens and then choosing the path with the highest answer-confidence margin, these hidden reasoning trajectories can be exposed and final-answer accuracy increases.",
+    "to_cot_or_not_to_cot": "Chain-of-Thought achieves performance gain on math and formal logic. CoT does not achieve statistically significant performance gain, sometimes even has slight loss, in other and most fields.",
+    "llms_assume_rationality": "LLMs struggle to predict or simulate human behavior in a classic risky choice setting, assuming that people make decisions more rationally than we actually do. LLMs also assume people act rationally when reasoning backwards from observed actions to internal utilities, aligning with how humans make inferences about others' choices",
+    "uncertainty_in_instruction_following": "Verbalized self-evaluation methods outperform logit-based approaches in Controlled-Easy tasks, while internal model states provide more reliable uncertainty signals in both Controlled-Easy and Realistic settings. All methods struggle with more complex tasks in ControlledHard",
+    "fractal_complexity_of_language": "Various strategies, such as the decoding temperature and prompting method, can impact fractal parameters even when log-perplexity scores seem to be unaffected.\n For pretrained models, larger architectures are more effective at capturing such fractal properties.\n With instruction-tuned models, the similarity to human language does not improve monotonically as the amount of contextual information in the prompt increases.\n The Hurst parameter emerged as a strong predictor of quality in generated texts, among other significant findings.",
+    "llm_value_consistency": "Using the Basic prompt, LLM's answers show variance across different generated personas, and show internally consistent outputs. These results suggest that LLMs cannot be treated as individuals holding a coherent set of value priorities. Prompts that endow the LLM with a personality improved the consistency of each specific value profile. However, with targeted prompt, LLM can be guided to display corresponding persona."
 }
 
 

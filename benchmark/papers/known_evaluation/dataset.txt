@@ -1,2 +1,0 @@
-Download dataset.json and put it in /data folder
-https://huggingface.co/datasets/jjpn2/eval_awareness

@@ -113,7 +113,7 @@ USE_SUBSCRIPTION=1 (mark this as 1 if you want to use Claude Code subscription, 
 
 ### 1. Download Data for Specific Benchmark
 
-Some datasets in certain benchmarks are too big or cannot be directly loaded from huggingface. Instructions of getting them are provided in `dataset.txt` in the benchmark folder. Or you can download the complete benchmark folder with data using [this link](https://drive.google.com/file/d/128Tf5N0CNrfPzk9OYKxlbK_oNQnPHOGA/view?usp=sharing)
+In `benchmark` folder, some papers have empty `data` folder since the data can be loaded directly from HuggingFace. The sources of the data in nonempty data folder are described in `dataset.txt`.
 
 ### 2. Run Experiments
 

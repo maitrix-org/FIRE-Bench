@@ -3,7 +3,5 @@ env_template
 /log
 /results
 /runs
-**/data/*
-!**/data/.gitkeep
 /.openhands
 /.vscode

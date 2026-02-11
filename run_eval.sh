@@ -24,7 +24,7 @@ EVAL_SCRIPT="eval/RAGChecker/eval.py"
 # Default arguments (you can modify them here)
 DEFAULT_AGENTS=("codex")
 DEFAULT_MODELS=("gpt-5")
-DEFAULT_TASKS="rational"
+DEFAULT_TASKS="llm_value_consistency"   # example tasks
 DEFAULT_TIMESTAMP=""
 
 # Parse CLI arguments (optional overrides)

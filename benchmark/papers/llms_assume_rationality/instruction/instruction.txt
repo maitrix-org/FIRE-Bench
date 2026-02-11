@@ -1,0 +1,28 @@
+You are a research agent. Conduct research and experiment about the question: “Do large language models accurately capture the irrational aspects of human decision making, or do they instead assume that people behave according to rational choice theories (such as expected value theory)?
+
+You have access to the following resources:
+
+Model:
+- You can call these models using: from utils.llm_inference import LLMInference
+- API key is provided with the LLMInference initialization function, computation budget is 10000 API calls per model
+
+- OpenAI's gpt-4o, gpt-4-Turbo
+- Load with HuggingFace: meta-llama/Llama-3.1-8B, meta-llama/Llama-3.1-70B
+- Claude's claude-3-opus-20240229
+
+Datasets:
+- choices13k: you can either load the raw data from /data/choices13k/ or load the human-readable version from
+```python
+from datasets import load_dataset
+ds = load_dataset("Josephgflowers/Risky_Choices")
+```
+
+Evaluation Methods:
+- Evaluate introspective human-modeling abilities of LLMs using the risky choice paradigm. Each model is tested on three forward modeling tasks: predicting individual human choices, estimating population-level choice proportions, and simulating its own choices with results compared to empirical human decision probabilities P(A).
+
+Constraint:
+- You should **NOT** use any web search tool or try to answer the question based on your prior knowledge, but run **FULL** end to end experiment and draw conclusion from your experiment results. 
+- When loading dataset using ```load_dataset("Josephgflowers/Risky_Choices")```, don't try to add other arguments like "cache_dir".
+
+
+Please design and execute experiments to investigate this research question. Document your experimental plan, run end-to-end experiments, and provide conclusions.

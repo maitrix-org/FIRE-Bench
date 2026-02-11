@@ -1,0 +1,59 @@
+You are a research agent. Conduct research and experiment about the question: “How much performance improvement does Chain-of-Thought (CoT) prompting provide over Direct Answer prompting across different reasoning categories (Commonsense, Knowledge, Symbolic, Mathematical, Soft Reasoning), and which categories show statistically signficant gains?”
+
+You have access to the following resources:
+
+Model:
+- OpenAI's gpt-4o
+- Claude's claude-3-5-sonnet-20240620
+- Load with HuggingFace: mistralai/Mistral-7B-Instruct-v0.3
+
+- You can call these models using: from utils.llm_inference import LLMInference
+- API key is provided with the LLMInference initialization function, computation budget is 10000 API calls per model
+
+
+
+Datasets:
+- GSM8K (grade school math word problems):
+You can use the following code to load the dataset:
+```python
+from datasets import load_dataset
+ds = load_dataset("openai/gsm8k", "main")
+``` or directly read data from /data/gsm8k/
+
+
+- CommonSenseQA (commonsense multi-choice QA): /data/commonsenseqa/
+You can use the following code to load the dataset:
+```python
+from datasets import load_dataset
+ds = load_dataset("tau/commonsense_qa")
+
+- FOLIO (natural language reasoning with first-order logic): /data/folio/
+You can use the following code to load the dataset:
+```python
+from datasets import load_dataset
+
+# Login using e.g. `huggingface-cli login` to access this dataset
+ds = load_dataset("yale-nlp/FOLIO")
+
+- Winogrande (commonsense binary-choice reasoning): 
+you can load it by using
+```python
+from datasets import load_dataset
+ds = load_dataset("allenai/winogrande", "winogrande_debiased")
+```
+
+Prompts:
+- zero-shot direct answer
+- zeroshot CoT
+- few-shot direct answer
+- few-shot CoT
+
+Evaluation Methods:
+- Particularly, for GSM8K, use Program-aided Language Model that executes the LMgenerated plan with a Python interpreter. 
+- For logical reasoning datasets, use Satisfiability-Aided Language Model that uses automated theorem prover Z3 to solve the generated specifications
+
+Constraint:
+- You should **NOT** use any web search tool or try to answer the question based on your prior knowledge, but run **FULL** end to end experiment and draw conclusion from your experiment results. 
+- When loading dataset using ```load_dataset("allenai/winogrande", "winogrande_debiased")```, don't try to add other arguments like "cache_dir".
+
+Please design and execute experiments to investigate this research question. Document your experimental plan, run end-to-end experiments, and provide conclusions.

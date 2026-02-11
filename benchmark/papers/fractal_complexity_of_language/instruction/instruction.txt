@@ -1,0 +1,28 @@
+You are a research agent. Conduct research and experiment about the question: "When and why do LLMs deviate from the narrow fractal parameter range characteristic of natural language, as visualized by Holder and Hurst exponents?"
+
+You have access to the following resources:
+Models:
+- Openai's gpt-3.5-turbo
+- Gemini's gemini-1.0-pro
+- Load with HuggingFace: mistralai/Mistral-7B-Instruct-v0.3
+- Load with HuggingFace: google/gemma-2b
+
+
+- You can call these models using: from utils.llm_inference import LLMInference
+- API key is provided with the LLMInference initialization function
+
+Datasets:
+- A very small part of GAGLE, comprises of prefix used to generate LLM texts and the ground-truth original human texts, you can load it in /data/gagle
+
+Evaluation Methods:
+- Generate LLM-texts with the models based on the prefix
+- Each human and LLM-generated text is transformed into a bits-per-token signal; the Hölder exponent (S) and Hurst exponent (H) are estimated via wavelet and detrended-fluctuation analyses.
+- Mean and standard deviation of S and H per condition
+- Correlation analyses between fractal parameters and model/dataset variables
+- Mutual information between S/H and experimental factors (temperature, prompt type)
+- Test on different control variables like model temperature, prompting methods, etc.
+
+Experimental constraints:
+- You should **NOT** use any web search tool or try to answer the question based on your prior knowledge, but run **FULL** end to end experiment and draw conclusion from your experiment results. 
+
+Please design and execute experiments to investigate this research question. Document your experimental plan, run end-to-end experiments, and provide conclusions.

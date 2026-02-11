@@ -1,0 +1,2 @@
+Pick a small subset of GAGLE dataset named processed_data.jsonl in /data/gagle folder
+https://huggingface.co/datasets/ibomohsin/gagle

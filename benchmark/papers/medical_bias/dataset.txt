@@ -1,1 +1,0 @@
-Extract a subset of PMC patients from https://huggingface.co/datasets/zhengyun21/PMC-Patients, at benchmark/papers/medical_bias/data/PMC-Patients_subset100.json

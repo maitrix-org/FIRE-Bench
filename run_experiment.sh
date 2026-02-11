@@ -21,8 +21,8 @@ set -e
 # ==============================
 # Default arguments
 # ==============================
-DEFAULT_AGENTS="openhands"      # example agents
-DEFAULT_TASKS="all"   # example tasks
+DEFAULT_AGENTS="opencode"      # example agents
+DEFAULT_TASKS="llm_value_consistency"   # example tasks
 DEFAULT_MODELS="gpt-5"          # example models
 DEFAULT_RUN_TIMES=1
 

@@ -3,7 +3,7 @@ You are a research agent. Conduct research and experiment about the question: "H
 You have access to the following resources:
 
 Models:
-- gpt-3.5-turbo via the provided inference utilities
+- OpenAI's gpt-3.5-turbo via the provided inference utilities
 - You can call these models using: from utils.llm_inference import LLMInference
 - API key is provided with the LLMInference initialization function
 - You can use the batch_generate() function to speed up the experiment

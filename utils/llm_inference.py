@@ -70,10 +70,10 @@ class LLMInference:
             if not self.api_key:
                 raise ValueError("Gemini requires a Google API key")
 
-        elif self.provider == "llama":
+        elif self.provider == "huggingface":
             if not self.hf_token:
-                raise ValueError("LLaMA requires a Hugging Face token")
-            self.pipe = self._load_llama_pipeline(model_name)
+                raise ValueError("Hugging Face requires a token")
+            self.pipe = self._load_huggingface_pipeline(model_name)
 
         elif self.provider == "claude":
             if not self.api_key:
@@ -161,13 +161,13 @@ class LLMInference:
             "cost_usd": cost
         }
 
-    # ---- LLaMA ----
-    def _load_llama_pipeline(self, model_name):
+    # ---- Hugging Face ----
+    def _load_huggingface_pipeline(self, model_name):
         tokenizer = AutoTokenizer.from_pretrained(model_name, token=self.hf_token)
         model = AutoModelForCausalLM.from_pretrained(model_name, token=self.hf_token, device_map="auto")
         return pipeline("text-generation", model=model, tokenizer=tokenizer)
 
-    def _generate_llama(self, prompt, max_tokens=256, temperature=0.7):
+    def _generate_huggingface(self, prompt, max_tokens=256, temperature=0.7):
         output = self.pipe(prompt, max_new_tokens=max_tokens, do_sample=True, temperature=temperature)
         text = output[0]['generated_text']
 
@@ -192,8 +192,8 @@ class LLMInference:
             return self._generate_openai(prompt, **kwargs)
         elif self.provider == "gemini":
             return self._generate_gemini(prompt, **kwargs)
-        elif self.provider == "llama":
-            return self._generate_llama(prompt, **kwargs)
+        elif self.provider == "huggingface":
+            return self._generate_huggingface(prompt, **kwargs)
         elif self.provider == "claude":
             return self._generate_claude(prompt, **kwargs)
         else:
@@ -261,9 +261,27 @@ def test_gemini():
         print(f"Response: {res['content'][:200]}...")
     print("Usage summary:", client.get_usage_summary())
 
-def test_llama():
-    print("\n=== Testing LLaMA (Meta-Llama-3-8B-Instruct) ===")
-    client = LLMInference(provider="llama", model_name="meta-llama/Meta-Llama-3-8B-Instruct", hf_token=HF_TOKEN)
+def test_huggingface1():
+    print("\n=== Testing Hugging Face (Meta-Llama-3-8B-Instruct) ===")
+    client = LLMInference(provider="huggingface", model_name="meta-llama/Meta-Llama-3-8B-Instruct", hf_token=HF_TOKEN)
+    results = client.batch_generate(prompts, max_workers=20, max_tokens=100)
+    for i, res in enumerate(results):
+        print(f"\nPrompt {i+1}: {prompts[i]}")
+        print(f"Response: {res['content'][:200]}...")
+    print("Usage summary:", client.get_usage_summary())
+
+def test_huggingface2():
+    print("\n=== Testing Hugging Face (mistralai/Mistral-7B-Instruct-v0.3) ===")
+    client = LLMInference(provider="huggingface", model_name="mistralai/Mistral-7B-Instruct-v0.3", hf_token=HF_TOKEN)
+    results = client.batch_generate(prompts, max_workers=20, max_tokens=100)
+    for i, res in enumerate(results):
+        print(f"\nPrompt {i+1}: {prompts[i]}")
+        print(f"Response: {res['content'][:200]}...")
+    print("Usage summary:", client.get_usage_summary())
+
+def test_huggingface3():
+    print("\n=== Testing Hugging Face (google/gemma-2-9b-it) ===")
+    client = LLMInference(provider="huggingface", model_name="google/gemma-2-9b-it", hf_token=HF_TOKEN)
     results = client.batch_generate(prompts, max_workers=20, max_tokens=100)
     for i, res in enumerate(results):
         print(f"\nPrompt {i+1}: {prompts[i]}")
@@ -294,9 +312,11 @@ if __name__ == "__main__":
         print("Skipping Gemini test: no GOOGLE_API_KEY")
 
     if HF_TOKEN:
-        test_llama()
+        test_huggingface1()
+        test_huggingface2()
+        test_huggingface3()
     else:
-        print("Skipping LLaMA test: no HF_TOKEN")
+        print("Skipping Hugging Face test: no HF_TOKEN")
 
     if CLAUDE_API_KEY:
         test_claude()
