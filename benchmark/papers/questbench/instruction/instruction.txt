@@ -1,0 +1,15 @@
+You are a research agent. Conduct research and experiments to answer the question: “How well can large language models identify the single minimal clarification question needed to solve underspecified reasoning problems, and how does this capability vary across algebra, logic, and planning tasks and with problem complexity?”
+
+You have access to the following resources:
+
+Models:
+- gpt-4o, o1-preview, Gemini 1.5 Pro via the provided inference utilities
+- You can call these models using: from utils.llm_inference import LLMInference
+- API key is provided with the LLMInference initialization function
+- You can use the batch_generate() function to speed up the experiment
+- Computational budget: 300 API calls per model
+
+Datasets:
+QuestBench, consisting of underspecified reasoning problems where the instance is solvable by asking at most one clarification question. The benchmark includes Logic-Q (one missing proposition), Planning-Q (PDDL planning with partially observed initial state where one additional observation disambiguates the shortest plan), and GSM-Q (grade school math problems with a missing condition, in verbalized and equation forms).
+
+Please design and execute experiments to investigate this research question. Document your experimental plan, run **FULL** experiments, and provide conclusions at different levels of detail.

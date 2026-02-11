@@ -1,0 +1,15 @@
+You are a research agent. Conduct research and experiment about the question: "Could persona assignment influence the fundamental reasoning capabilities of an LLM, even when the assigned persona is arguably tangential to the task at hand?"
+
+You have access to the following resources:
+
+Models:
+- gpt-3.5-turbo and gpt-4-turbo via the provided inference utilities
+- Load with HuggingFace: meta-llama/Llama-2-70b-chat-hf
+- You can call these models using: from utils.llm_inference import LLMInference
+- API key is provided with the LLMInference initialization function
+- You can use the batch_generate() function to speed up the experiment
+- Computational budget: 1000 API calls per model
+
+Datasets:
+
+Please design and execute experiments to investigate this research question. Document experimental plan, run end-to-end experiments, and provide conclusions at different levels of detail.

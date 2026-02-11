@@ -1,0 +1,401 @@
+CSP,Full Answer,GT Question,Possible Questions,Heldout Constraint,Rewritten Problem,Rewritten Problem Answer,Equations,Variables,depth,Question ID
+"Variables:
+* E1 [Earnings from regular hours]
+* E2 [Earnings from overtime hours]
+* E3 [Earnings from paid lunch hours]
+* H1 = 40 [Hours worked at the regular rate]
+* H2 = 5 [Overtime hours worked]
+* H3 = 2 [Unpaid training hours]
+* H4 = 1 [Paid lunch hours]
+* O = 1 [Overtime multiplier]
+* R = 10 [Eliza's regular hourly rate]
+* T [Total earnings for the week]
+
+Equations:
+E1 = R * H1 [Earnings from regular hours is the hourly rate multiplied by 40 hours.]
+E2 = (R * O) * H2 [Earnings from overtime is the hourly rate with overtime multiplier times overtime hours.]
+E3 = R * H4 [Earnings from the paid lunch is the hourly rate times paid lunch hours.]
+T = E1 + E2 + E3 [Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.]
+
+Goal:
+T [Total earnings for the week]",460.0,R,"[""R"", ""H3""]","R = 10 [Eliza's regular hourly rate]
+H3 = 2 [Unpaid training hours]","Eliza's rate per hour for the first 40 hours she works each week is given. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. However, she also spent 1 hour on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E1 = R * H1"": ""Earnings from regular hours is the hourly rate multiplied by 40 hours."", ""E2 = (R * O) * H2"": ""Earnings from overtime is the hourly rate with overtime multiplier times overtime hours."", ""E3 = R * H4"": ""Earnings from the paid lunch is the hourly rate times paid lunch hours."", ""T = E1 + E2 + E3"": ""Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.""}","{""E1"": ""Earnings from regular hours"", ""E2"": ""Earnings from overtime hours"", ""E3"": ""Earnings from paid lunch hours"", ""H1"": ""Hours worked at the regular rate"", ""H2"": ""Overtime hours worked"", ""H3"": ""Unpaid training hours"", ""H4"": ""Paid lunch hours"", ""O"": ""Overtime multiplier"", ""R"": ""Eliza's regular hourly rate"", ""T"": ""Total earnings for the week""}",2,78
+"Variables:
+* E1 [Earnings from regular hours]
+* E2 [Earnings from overtime hours]
+* E3 [Earnings from paid lunch hours]
+* H1 = 40 [Hours worked at the regular rate]
+* H2 = 5 [Overtime hours worked]
+* H3 = 2 [Unpaid training hours]
+* H4 = 1 [Paid lunch hours]
+* O = 1 [Overtime multiplier]
+* R = 10 [Eliza's regular hourly rate]
+* T [Total earnings for the week]
+
+Equations:
+E1 = R * H1 [Earnings from regular hours is the hourly rate multiplied by 40 hours.]
+E2 = (R * O) * H2 [Earnings from overtime is the hourly rate with overtime multiplier times overtime hours.]
+E3 = R * H4 [Earnings from the paid lunch is the hourly rate times paid lunch hours.]
+T = E1 + E2 + E3 [Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.]
+
+Goal:
+T [Total earnings for the week]",460.0,H1,"[""H1"", ""H3""]","H1 = 40 [Hours worked at the regular rate]
+H3 = 2 [Unpaid training hours]","Eliza's rate per hour for each week is $10. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. However, she also spent 1 hour on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E1 = R * H1"": ""Earnings from regular hours is the hourly rate multiplied by 40 hours."", ""E2 = (R * O) * H2"": ""Earnings from overtime is the hourly rate with overtime multiplier times overtime hours."", ""E3 = R * H4"": ""Earnings from the paid lunch is the hourly rate times paid lunch hours."", ""T = E1 + E2 + E3"": ""Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.""}","{""E1"": ""Earnings from regular hours"", ""E2"": ""Earnings from overtime hours"", ""E3"": ""Earnings from paid lunch hours"", ""H1"": ""Hours worked at the regular rate"", ""H2"": ""Overtime hours worked"", ""H3"": ""Unpaid training hours"", ""H4"": ""Paid lunch hours"", ""O"": ""Overtime multiplier"", ""R"": ""Eliza's regular hourly rate"", ""T"": ""Total earnings for the week""}",2,78
+"Variables:
+* E1 [Earnings from regular hours]
+* E2 [Earnings from overtime hours]
+* E3 [Earnings from paid lunch hours]
+* H1 = 40 [Hours worked at the regular rate]
+* H2 = 5 [Overtime hours worked]
+* H3 = 2 [Unpaid training hours]
+* H4 = 1 [Paid lunch hours]
+* O = 1 [Overtime multiplier]
+* R = 10 [Eliza's regular hourly rate]
+* T [Total earnings for the week]
+
+Equations:
+E1 = R * H1 [Earnings from regular hours is the hourly rate multiplied by 40 hours.]
+E2 = (R * O) * H2 [Earnings from overtime is the hourly rate with overtime multiplier times overtime hours.]
+E3 = R * H4 [Earnings from the paid lunch is the hourly rate times paid lunch hours.]
+T = E1 + E2 + E3 [Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.]
+
+Goal:
+T [Total earnings for the week]",460.0,R,"[""R"", ""H3""]","R = 10 [Eliza's regular hourly rate]
+H3 = 2 [Unpaid training hours]","Eliza's rate per hour for the first 40 hours. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. However, she also attending a mandatory, unpaid training session and 1 hour on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E1 = R * H1"": ""Earnings from regular hours is the hourly rate multiplied by 40 hours."", ""E2 = (R * O) * H2"": ""Earnings from overtime is the hourly rate with overtime multiplier times overtime hours."", ""E3 = R * H4"": ""Earnings from the paid lunch is the hourly rate times paid lunch hours."", ""T = E1 + E2 + E3"": ""Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.""}","{""E1"": ""Earnings from regular hours"", ""E2"": ""Earnings from overtime hours"", ""E3"": ""Earnings from paid lunch hours"", ""H1"": ""Hours worked at the regular rate"", ""H2"": ""Overtime hours worked"", ""H3"": ""Unpaid training hours"", ""H4"": ""Paid lunch hours"", ""O"": ""Overtime multiplier"", ""R"": ""Eliza's regular hourly rate"", ""T"": ""Total earnings for the week""}",2,78
+"Variables:
+* E1 [Earnings from regular hours]
+* E2 [Earnings from overtime hours]
+* E3 [Earnings from paid lunch hours]
+* H1 = 40 [Hours worked at the regular rate]
+* H2 = 5 [Overtime hours worked]
+* H3 = 2 [Unpaid training hours]
+* H4 = 1 [Paid lunch hours]
+* O = 1 [Overtime multiplier]
+* R = 10 [Eliza's regular hourly rate]
+* T [Total earnings for the week]
+
+Equations:
+E1 = R * H1 [Earnings from regular hours is the hourly rate multiplied by 40 hours.]
+E2 = (R * O) * H2 [Earnings from overtime is the hourly rate with overtime multiplier times overtime hours.]
+E3 = R * H4 [Earnings from the paid lunch is the hourly rate times paid lunch hours.]
+T = E1 + E2 + E3 [Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.]
+
+Goal:
+T [Total earnings for the week]",460.0,H1,"[""H1"", ""H3""]","H1 = 40 [Hours worked at the regular rate]
+H3 = 2 [Unpaid training hours]","she works each week is $10. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. However,1 hour on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E1 = R * H1"": ""Earnings from regular hours is the hourly rate multiplied by 40 hours."", ""E2 = (R * O) * H2"": ""Earnings from overtime is the hourly rate with overtime multiplier times overtime hours."", ""E3 = R * H4"": ""Earnings from the paid lunch is the hourly rate times paid lunch hours."", ""T = E1 + E2 + E3"": ""Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.""}","{""E1"": ""Earnings from regular hours"", ""E2"": ""Earnings from overtime hours"", ""E3"": ""Earnings from paid lunch hours"", ""H1"": ""Hours worked at the regular rate"", ""H2"": ""Overtime hours worked"", ""H3"": ""Unpaid training hours"", ""H4"": ""Paid lunch hours"", ""O"": ""Overtime multiplier"", ""R"": ""Eliza's regular hourly rate"", ""T"": ""Total earnings for the week""}",2,78
+"Variables:
+* E1 [Earnings from regular hours]
+* E2 [Earnings from overtime hours]
+* E3 [Earnings from paid lunch hours]
+* H1 = 40 [Hours worked at the regular rate]
+* H2 = 5 [Overtime hours worked]
+* H3 = 2 [Unpaid training hours]
+* H4 = 1 [Paid lunch hours]
+* O = 1 [Overtime multiplier]
+* R = 10 [Eliza's regular hourly rate]
+* T [Total earnings for the week]
+
+Equations:
+E1 = R * H1 [Earnings from regular hours is the hourly rate multiplied by 40 hours.]
+E2 = (R * O) * H2 [Earnings from overtime is the hourly rate with overtime multiplier times overtime hours.]
+E3 = R * H4 [Earnings from the paid lunch is the hourly rate times paid lunch hours.]
+T = E1 + E2 + E3 [Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.]
+
+Goal:
+T [Total earnings for the week]",460.0,H4,"[""H4"", ""H3""]","H4 = 1 [Paid lunch hours]
+H3 = 2 [Unpaid training hours]","Eliza's rate per hour for the first 40 hours she works each week is $10. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. Considering these factors, how much are her earnings for this week?",Unclear,"{""E1 = R * H1"": ""Earnings from regular hours is the hourly rate multiplied by 40 hours."", ""E2 = (R * O) * H2"": ""Earnings from overtime is the hourly rate with overtime multiplier times overtime hours."", ""E3 = R * H4"": ""Earnings from the paid lunch is the hourly rate times paid lunch hours."", ""T = E1 + E2 + E3"": ""Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.""}","{""E1"": ""Earnings from regular hours"", ""E2"": ""Earnings from overtime hours"", ""E3"": ""Earnings from paid lunch hours"", ""H1"": ""Hours worked at the regular rate"", ""H2"": ""Overtime hours worked"", ""H3"": ""Unpaid training hours"", ""H4"": ""Paid lunch hours"", ""O"": ""Overtime multiplier"", ""R"": ""Eliza's regular hourly rate"", ""T"": ""Total earnings for the week""}",2,78
+"Variables:
+* E [Total earnings for the week]
+* L = 1 [Lunch break time in hours]
+* M = 1 [Overtime multiplier i.e. 1.2 times regular rate]
+* N = 45 [Total hours worked]
+* N1 = 40 [Number of regular hours worked]
+* N2 [Number of overtime hours worked]
+* P1 = 10 [Regular hourly rate in dollars]
+* P2 [Overtime hourly rate in dollars]
+* X = 2 [Hours spent attending the training session]
+
+Equations:
+E = (P1 * N1) + (P2 * N2) + (P1 * L) [The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate.]
+N2 = N - N1 [The number of overtime hours worked is the total hours worked minus the regular hours worked.]
+P2 = M * P1 [The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.]
+
+Goal:
+E [How much is Eliza's total earnings for the week?]",460.0,N1,"[""N1"", ""X""]","N1 = 40 [Number of regular hours worked]
+X = 2 [Hours spent attending the training session]","Eliza's rate per hour for the first hours she works each week is $10. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. However, she also spent hours attending a mandatory, unpaid training session and 1 hour on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E = (P1 * N1) + (P2 * N2) + (P1 * L)"": ""The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate."", ""N2 = N - N1"": ""The number of overtime hours worked is the total hours worked minus the regular hours worked."", ""P2 = M * P1"": ""The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.""}","{""E"": ""Total earnings for the week"", ""L"": ""Lunch break time in hours"", ""M"": ""Overtime multiplier i.e. 1.2 times regular rate"", ""N"": ""Total hours worked"", ""N1"": ""Number of regular hours worked"", ""N2"": ""Number of overtime hours worked"", ""P1"": ""Regular hourly rate in dollars"", ""P2"": ""Overtime hourly rate in dollars"", ""X"": ""Hours spent attending the training session""}",2,78
+"Variables:
+* E [Total earnings for the week]
+* L = 1 [Lunch break time in hours]
+* M = 1 [Overtime multiplier i.e. 1.2 times regular rate]
+* N = 45 [Total hours worked]
+* N1 = 40 [Number of regular hours worked]
+* N2 [Number of overtime hours worked]
+* P1 = 10 [Regular hourly rate in dollars]
+* P2 [Overtime hourly rate in dollars]
+* X = 2 [Hours spent attending the training session]
+
+Equations:
+E = (P1 * N1) + (P2 * N2) + (P1 * L) [The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate.]
+N2 = N - N1 [The number of overtime hours worked is the total hours worked minus the regular hours worked.]
+P2 = M * P1 [The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.]
+
+Goal:
+E [How much is Eliza's total earnings for the week?]",460.0,P1,"[""P1"", ""X""]","P1 = 10 [Regular hourly rate in dollars]
+X = 2 [Hours spent attending the training session]","Eliza's rate per hour for the first 40 hours she works each week is certain amount. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. However, she also spent hours attending a mandatory, unpaid training session and 1 hour on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E = (P1 * N1) + (P2 * N2) + (P1 * L)"": ""The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate."", ""N2 = N - N1"": ""The number of overtime hours worked is the total hours worked minus the regular hours worked."", ""P2 = M * P1"": ""The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.""}","{""E"": ""Total earnings for the week"", ""L"": ""Lunch break time in hours"", ""M"": ""Overtime multiplier i.e. 1.2 times regular rate"", ""N"": ""Total hours worked"", ""N1"": ""Number of regular hours worked"", ""N2"": ""Number of overtime hours worked"", ""P1"": ""Regular hourly rate in dollars"", ""P2"": ""Overtime hourly rate in dollars"", ""X"": ""Hours spent attending the training session""}",2,78
+"Variables:
+* E [Total earnings for the week]
+* L = 1 [Lunch break time in hours]
+* M = 1 [Overtime multiplier i.e. 1.2 times regular rate]
+* N = 45 [Total hours worked]
+* N1 = 40 [Number of regular hours worked]
+* N2 [Number of overtime hours worked]
+* P1 = 10 [Regular hourly rate in dollars]
+* P2 [Overtime hourly rate in dollars]
+* X = 2 [Hours spent attending the training session]
+
+Equations:
+E = (P1 * N1) + (P2 * N2) + (P1 * L) [The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate.]
+N2 = N - N1 [The number of overtime hours worked is the total hours worked minus the regular hours worked.]
+P2 = M * P1 [The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.]
+
+Goal:
+E [How much is Eliza's total earnings for the week?]",460.0,N,"[""N"", ""X""]","N = 45 [Total hours worked]
+X = 2 [Hours spent attending the training session]","Eliza's rate per hour for the first 40 hours she works each week is $10. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for hours. However, she also spent hours attending a mandatory, unpaid training session and 1 hour on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E = (P1 * N1) + (P2 * N2) + (P1 * L)"": ""The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate."", ""N2 = N - N1"": ""The number of overtime hours worked is the total hours worked minus the regular hours worked."", ""P2 = M * P1"": ""The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.""}","{""E"": ""Total earnings for the week"", ""L"": ""Lunch break time in hours"", ""M"": ""Overtime multiplier i.e. 1.2 times regular rate"", ""N"": ""Total hours worked"", ""N1"": ""Number of regular hours worked"", ""N2"": ""Number of overtime hours worked"", ""P1"": ""Regular hourly rate in dollars"", ""P2"": ""Overtime hourly rate in dollars"", ""X"": ""Hours spent attending the training session""}",2,78
+"Variables:
+* E [Total earnings for the week]
+* L = 1 [Lunch break time in hours]
+* M = 1 [Overtime multiplier i.e. 1.2 times regular rate]
+* N = 45 [Total hours worked]
+* N1 = 40 [Number of regular hours worked]
+* N2 [Number of overtime hours worked]
+* P1 = 10 [Regular hourly rate in dollars]
+* P2 [Overtime hourly rate in dollars]
+* X = 2 [Hours spent attending the training session]
+
+Equations:
+E = (P1 * N1) + (P2 * N2) + (P1 * L) [The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate.]
+N2 = N - N1 [The number of overtime hours worked is the total hours worked minus the regular hours worked.]
+P2 = M * P1 [The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.]
+
+Goal:
+E [How much is Eliza's total earnings for the week?]",460.0,M,"[""M"", ""X""]","M = 1 [Overtime multiplier i.e. 1.2 times regular rate]
+X = 2 [Hours spent attending the training session]","Eliza's rate per hour for the first 40 hours she works each week is $10. She also receives an overtime pay for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. However, she also spent hours attending a mandatory, unpaid training session and 1 hour on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E = (P1 * N1) + (P2 * N2) + (P1 * L)"": ""The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate."", ""N2 = N - N1"": ""The number of overtime hours worked is the total hours worked minus the regular hours worked."", ""P2 = M * P1"": ""The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.""}","{""E"": ""Total earnings for the week"", ""L"": ""Lunch break time in hours"", ""M"": ""Overtime multiplier i.e. 1.2 times regular rate"", ""N"": ""Total hours worked"", ""N1"": ""Number of regular hours worked"", ""N2"": ""Number of overtime hours worked"", ""P1"": ""Regular hourly rate in dollars"", ""P2"": ""Overtime hourly rate in dollars"", ""X"": ""Hours spent attending the training session""}",2,78
+"Variables:
+* E [Total earnings for the week]
+* L = 1 [Lunch break time in hours]
+* M = 1 [Overtime multiplier i.e. 1.2 times regular rate]
+* N = 45 [Total hours worked]
+* N1 = 40 [Number of regular hours worked]
+* N2 [Number of overtime hours worked]
+* P1 = 10 [Regular hourly rate in dollars]
+* P2 [Overtime hourly rate in dollars]
+* X = 2 [Hours spent attending the training session]
+
+Equations:
+E = (P1 * N1) + (P2 * N2) + (P1 * L) [The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate.]
+N2 = N - N1 [The number of overtime hours worked is the total hours worked minus the regular hours worked.]
+P2 = M * P1 [The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.]
+
+Goal:
+E [How much is Eliza's total earnings for the week?]",460.0,L,"[""L"", ""X""]","L = 1 [Lunch break time in hours]
+X = 2 [Hours spent attending the training session]","Eliza's rate per hour for the first 40 hours she works each week is $10. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. However, she also spent hours attending a mandatory, unpaid training session and on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E = (P1 * N1) + (P2 * N2) + (P1 * L)"": ""The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate."", ""N2 = N - N1"": ""The number of overtime hours worked is the total hours worked minus the regular hours worked."", ""P2 = M * P1"": ""The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.""}","{""E"": ""Total earnings for the week"", ""L"": ""Lunch break time in hours"", ""M"": ""Overtime multiplier i.e. 1.2 times regular rate"", ""N"": ""Total hours worked"", ""N1"": ""Number of regular hours worked"", ""N2"": ""Number of overtime hours worked"", ""P1"": ""Regular hourly rate in dollars"", ""P2"": ""Overtime hourly rate in dollars"", ""X"": ""Hours spent attending the training session""}",1,78
+"Variables:
+* E1 [Earnings from regular hours]
+* E2 [Earnings from overtime hours]
+* E3 [Earnings from paid lunch hours]
+* H1 = 40 [Hours worked at the regular rate]
+* H2 = 5 [Overtime hours worked]
+* H3 = 2 [Unpaid training hours]
+* H4 = 1 [Paid lunch hours]
+* O = 1 [Overtime multiplier]
+* R = 10 [Eliza's regular hourly rate]
+* T [Total earnings for the week]
+
+Equations:
+E1 = R * H1 [Earnings from regular hours is the hourly rate multiplied by 40 hours.]
+E2 = (R * O) * H2 [Earnings from overtime is the hourly rate with overtime multiplier times overtime hours.]
+E3 = R * H4 [Earnings from the paid lunch is the hourly rate times paid lunch hours.]
+T = E1 + E2 + E3 [Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.]
+
+Goal:
+T [Total earnings for the week]",460.0,R,"[""R"", ""H3""]","R = 10 [Eliza's regular hourly rate]
+H3 = 2 [Unpaid training hours]","Eliza's rate per hour for the first 40 hours she works each week is given. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. However, she also spent 1 hour on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E1 = R * H1"": ""Earnings from regular hours is the hourly rate multiplied by 40 hours."", ""E2 = (R * O) * H2"": ""Earnings from overtime is the hourly rate with overtime multiplier times overtime hours."", ""E3 = R * H4"": ""Earnings from the paid lunch is the hourly rate times paid lunch hours."", ""T = E1 + E2 + E3"": ""Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.""}","{""E1"": ""Earnings from regular hours"", ""E2"": ""Earnings from overtime hours"", ""E3"": ""Earnings from paid lunch hours"", ""H1"": ""Hours worked at the regular rate"", ""H2"": ""Overtime hours worked"", ""H3"": ""Unpaid training hours"", ""H4"": ""Paid lunch hours"", ""O"": ""Overtime multiplier"", ""R"": ""Eliza's regular hourly rate"", ""T"": ""Total earnings for the week""}",2,78
+"Variables:
+* E1 [Earnings from regular hours]
+* E2 [Earnings from overtime hours]
+* E3 [Earnings from paid lunch hours]
+* H1 = 40 [Hours worked at the regular rate]
+* H2 = 5 [Overtime hours worked]
+* H3 = 2 [Unpaid training hours]
+* H4 = 1 [Paid lunch hours]
+* O = 1 [Overtime multiplier]
+* R = 10 [Eliza's regular hourly rate]
+* T [Total earnings for the week]
+
+Equations:
+E1 = R * H1 [Earnings from regular hours is the hourly rate multiplied by 40 hours.]
+E2 = (R * O) * H2 [Earnings from overtime is the hourly rate with overtime multiplier times overtime hours.]
+E3 = R * H4 [Earnings from the paid lunch is the hourly rate times paid lunch hours.]
+T = E1 + E2 + E3 [Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.]
+
+Goal:
+T [Total earnings for the week]",460.0,H1,"[""H1"", ""H3""]","H1 = 40 [Hours worked at the regular rate]
+H3 = 2 [Unpaid training hours]","Eliza's rate per hour for each week is $10. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. However, she also spent 1 hour on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E1 = R * H1"": ""Earnings from regular hours is the hourly rate multiplied by 40 hours."", ""E2 = (R * O) * H2"": ""Earnings from overtime is the hourly rate with overtime multiplier times overtime hours."", ""E3 = R * H4"": ""Earnings from the paid lunch is the hourly rate times paid lunch hours."", ""T = E1 + E2 + E3"": ""Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.""}","{""E1"": ""Earnings from regular hours"", ""E2"": ""Earnings from overtime hours"", ""E3"": ""Earnings from paid lunch hours"", ""H1"": ""Hours worked at the regular rate"", ""H2"": ""Overtime hours worked"", ""H3"": ""Unpaid training hours"", ""H4"": ""Paid lunch hours"", ""O"": ""Overtime multiplier"", ""R"": ""Eliza's regular hourly rate"", ""T"": ""Total earnings for the week""}",2,78
+"Variables:
+* E1 [Earnings from regular hours]
+* E2 [Earnings from overtime hours]
+* E3 [Earnings from paid lunch hours]
+* H1 = 40 [Hours worked at the regular rate]
+* H2 = 5 [Overtime hours worked]
+* H3 = 2 [Unpaid training hours]
+* H4 = 1 [Paid lunch hours]
+* O = 1 [Overtime multiplier]
+* R = 10 [Eliza's regular hourly rate]
+* T [Total earnings for the week]
+
+Equations:
+E1 = R * H1 [Earnings from regular hours is the hourly rate multiplied by 40 hours.]
+E2 = (R * O) * H2 [Earnings from overtime is the hourly rate with overtime multiplier times overtime hours.]
+E3 = R * H4 [Earnings from the paid lunch is the hourly rate times paid lunch hours.]
+T = E1 + E2 + E3 [Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.]
+
+Goal:
+T [Total earnings for the week]",460.0,R,"[""R"", ""H3""]","R = 10 [Eliza's regular hourly rate]
+H3 = 2 [Unpaid training hours]","Eliza's rate per hour for the first 40 hours. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. However, she also attending a mandatory, unpaid training session and 1 hour on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E1 = R * H1"": ""Earnings from regular hours is the hourly rate multiplied by 40 hours."", ""E2 = (R * O) * H2"": ""Earnings from overtime is the hourly rate with overtime multiplier times overtime hours."", ""E3 = R * H4"": ""Earnings from the paid lunch is the hourly rate times paid lunch hours."", ""T = E1 + E2 + E3"": ""Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.""}","{""E1"": ""Earnings from regular hours"", ""E2"": ""Earnings from overtime hours"", ""E3"": ""Earnings from paid lunch hours"", ""H1"": ""Hours worked at the regular rate"", ""H2"": ""Overtime hours worked"", ""H3"": ""Unpaid training hours"", ""H4"": ""Paid lunch hours"", ""O"": ""Overtime multiplier"", ""R"": ""Eliza's regular hourly rate"", ""T"": ""Total earnings for the week""}",2,78
+"Variables:
+* E1 [Earnings from regular hours]
+* E2 [Earnings from overtime hours]
+* E3 [Earnings from paid lunch hours]
+* H1 = 40 [Hours worked at the regular rate]
+* H2 = 5 [Overtime hours worked]
+* H3 = 2 [Unpaid training hours]
+* H4 = 1 [Paid lunch hours]
+* O = 1 [Overtime multiplier]
+* R = 10 [Eliza's regular hourly rate]
+* T [Total earnings for the week]
+
+Equations:
+E1 = R * H1 [Earnings from regular hours is the hourly rate multiplied by 40 hours.]
+E2 = (R * O) * H2 [Earnings from overtime is the hourly rate with overtime multiplier times overtime hours.]
+E3 = R * H4 [Earnings from the paid lunch is the hourly rate times paid lunch hours.]
+T = E1 + E2 + E3 [Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.]
+
+Goal:
+T [Total earnings for the week]",460.0,H1,"[""H1"", ""H3""]","H1 = 40 [Hours worked at the regular rate]
+H3 = 2 [Unpaid training hours]","she works each week is $10. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. However,1 hour on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E1 = R * H1"": ""Earnings from regular hours is the hourly rate multiplied by 40 hours."", ""E2 = (R * O) * H2"": ""Earnings from overtime is the hourly rate with overtime multiplier times overtime hours."", ""E3 = R * H4"": ""Earnings from the paid lunch is the hourly rate times paid lunch hours."", ""T = E1 + E2 + E3"": ""Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.""}","{""E1"": ""Earnings from regular hours"", ""E2"": ""Earnings from overtime hours"", ""E3"": ""Earnings from paid lunch hours"", ""H1"": ""Hours worked at the regular rate"", ""H2"": ""Overtime hours worked"", ""H3"": ""Unpaid training hours"", ""H4"": ""Paid lunch hours"", ""O"": ""Overtime multiplier"", ""R"": ""Eliza's regular hourly rate"", ""T"": ""Total earnings for the week""}",2,78
+"Variables:
+* E1 [Earnings from regular hours]
+* E2 [Earnings from overtime hours]
+* E3 [Earnings from paid lunch hours]
+* H1 = 40 [Hours worked at the regular rate]
+* H2 = 5 [Overtime hours worked]
+* H3 = 2 [Unpaid training hours]
+* H4 = 1 [Paid lunch hours]
+* O = 1 [Overtime multiplier]
+* R = 10 [Eliza's regular hourly rate]
+* T [Total earnings for the week]
+
+Equations:
+E1 = R * H1 [Earnings from regular hours is the hourly rate multiplied by 40 hours.]
+E2 = (R * O) * H2 [Earnings from overtime is the hourly rate with overtime multiplier times overtime hours.]
+E3 = R * H4 [Earnings from the paid lunch is the hourly rate times paid lunch hours.]
+T = E1 + E2 + E3 [Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.]
+
+Goal:
+T [Total earnings for the week]",460.0,H4,"[""H4"", ""H3""]","H4 = 1 [Paid lunch hours]
+H3 = 2 [Unpaid training hours]","Eliza's rate per hour for the first 40 hours she works each week is $10. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. Considering these factors, how much are her earnings for this week?",Unclear,"{""E1 = R * H1"": ""Earnings from regular hours is the hourly rate multiplied by 40 hours."", ""E2 = (R * O) * H2"": ""Earnings from overtime is the hourly rate with overtime multiplier times overtime hours."", ""E3 = R * H4"": ""Earnings from the paid lunch is the hourly rate times paid lunch hours."", ""T = E1 + E2 + E3"": ""Total earnings is the sum of earnings from regular hours, overtime, and paid lunch.""}","{""E1"": ""Earnings from regular hours"", ""E2"": ""Earnings from overtime hours"", ""E3"": ""Earnings from paid lunch hours"", ""H1"": ""Hours worked at the regular rate"", ""H2"": ""Overtime hours worked"", ""H3"": ""Unpaid training hours"", ""H4"": ""Paid lunch hours"", ""O"": ""Overtime multiplier"", ""R"": ""Eliza's regular hourly rate"", ""T"": ""Total earnings for the week""}",2,78
+"Variables:
+* E [Total earnings for the week]
+* L = 1 [Lunch break time in hours]
+* M = 1 [Overtime multiplier i.e. 1.2 times regular rate]
+* N = 45 [Total hours worked]
+* N1 = 40 [Number of regular hours worked]
+* N2 [Number of overtime hours worked]
+* P1 = 10 [Regular hourly rate in dollars]
+* P2 [Overtime hourly rate in dollars]
+* X = 2 [Hours spent attending the training session]
+
+Equations:
+E = (P1 * N1) + (P2 * N2) + (P1 * L) [The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate.]
+N2 = N - N1 [The number of overtime hours worked is the total hours worked minus the regular hours worked.]
+P2 = M * P1 [The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.]
+
+Goal:
+E [How much is Eliza's total earnings for the week?]",460.0,N1,"[""N1"", ""X""]","N1 = 40 [Number of regular hours worked]
+X = 2 [Hours spent attending the training session]","Eliza's rate per hour for the first hours she works each week is $10. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. However, she also spent hours attending a mandatory, unpaid training session and 1 hour on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E = (P1 * N1) + (P2 * N2) + (P1 * L)"": ""The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate."", ""N2 = N - N1"": ""The number of overtime hours worked is the total hours worked minus the regular hours worked."", ""P2 = M * P1"": ""The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.""}","{""E"": ""Total earnings for the week"", ""L"": ""Lunch break time in hours"", ""M"": ""Overtime multiplier i.e. 1.2 times regular rate"", ""N"": ""Total hours worked"", ""N1"": ""Number of regular hours worked"", ""N2"": ""Number of overtime hours worked"", ""P1"": ""Regular hourly rate in dollars"", ""P2"": ""Overtime hourly rate in dollars"", ""X"": ""Hours spent attending the training session""}",2,78
+"Variables:
+* E [Total earnings for the week]
+* L = 1 [Lunch break time in hours]
+* M = 1 [Overtime multiplier i.e. 1.2 times regular rate]
+* N = 45 [Total hours worked]
+* N1 = 40 [Number of regular hours worked]
+* N2 [Number of overtime hours worked]
+* P1 = 10 [Regular hourly rate in dollars]
+* P2 [Overtime hourly rate in dollars]
+* X = 2 [Hours spent attending the training session]
+
+Equations:
+E = (P1 * N1) + (P2 * N2) + (P1 * L) [The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate.]
+N2 = N - N1 [The number of overtime hours worked is the total hours worked minus the regular hours worked.]
+P2 = M * P1 [The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.]
+
+Goal:
+E [How much is Eliza's total earnings for the week?]",460.0,P1,"[""P1"", ""X""]","P1 = 10 [Regular hourly rate in dollars]
+X = 2 [Hours spent attending the training session]","Eliza's rate per hour for the first 40 hours she works each week is certain amount. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. However, she also spent hours attending a mandatory, unpaid training session and 1 hour on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E = (P1 * N1) + (P2 * N2) + (P1 * L)"": ""The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate."", ""N2 = N - N1"": ""The number of overtime hours worked is the total hours worked minus the regular hours worked."", ""P2 = M * P1"": ""The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.""}","{""E"": ""Total earnings for the week"", ""L"": ""Lunch break time in hours"", ""M"": ""Overtime multiplier i.e. 1.2 times regular rate"", ""N"": ""Total hours worked"", ""N1"": ""Number of regular hours worked"", ""N2"": ""Number of overtime hours worked"", ""P1"": ""Regular hourly rate in dollars"", ""P2"": ""Overtime hourly rate in dollars"", ""X"": ""Hours spent attending the training session""}",2,78
+"Variables:
+* E [Total earnings for the week]
+* L = 1 [Lunch break time in hours]
+* M = 1 [Overtime multiplier i.e. 1.2 times regular rate]
+* N = 45 [Total hours worked]
+* N1 = 40 [Number of regular hours worked]
+* N2 [Number of overtime hours worked]
+* P1 = 10 [Regular hourly rate in dollars]
+* P2 [Overtime hourly rate in dollars]
+* X = 2 [Hours spent attending the training session]
+
+Equations:
+E = (P1 * N1) + (P2 * N2) + (P1 * L) [The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate.]
+N2 = N - N1 [The number of overtime hours worked is the total hours worked minus the regular hours worked.]
+P2 = M * P1 [The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.]
+
+Goal:
+E [How much is Eliza's total earnings for the week?]",460.0,N,"[""N"", ""X""]","N = 45 [Total hours worked]
+X = 2 [Hours spent attending the training session]","Eliza's rate per hour for the first 40 hours she works each week is $10. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for hours. However, she also spent hours attending a mandatory, unpaid training session and 1 hour on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E = (P1 * N1) + (P2 * N2) + (P1 * L)"": ""The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate."", ""N2 = N - N1"": ""The number of overtime hours worked is the total hours worked minus the regular hours worked."", ""P2 = M * P1"": ""The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.""}","{""E"": ""Total earnings for the week"", ""L"": ""Lunch break time in hours"", ""M"": ""Overtime multiplier i.e. 1.2 times regular rate"", ""N"": ""Total hours worked"", ""N1"": ""Number of regular hours worked"", ""N2"": ""Number of overtime hours worked"", ""P1"": ""Regular hourly rate in dollars"", ""P2"": ""Overtime hourly rate in dollars"", ""X"": ""Hours spent attending the training session""}",2,78
+"Variables:
+* E [Total earnings for the week]
+* L = 1 [Lunch break time in hours]
+* M = 1 [Overtime multiplier i.e. 1.2 times regular rate]
+* N = 45 [Total hours worked]
+* N1 = 40 [Number of regular hours worked]
+* N2 [Number of overtime hours worked]
+* P1 = 10 [Regular hourly rate in dollars]
+* P2 [Overtime hourly rate in dollars]
+* X = 2 [Hours spent attending the training session]
+
+Equations:
+E = (P1 * N1) + (P2 * N2) + (P1 * L) [The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate.]
+N2 = N - N1 [The number of overtime hours worked is the total hours worked minus the regular hours worked.]
+P2 = M * P1 [The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.]
+
+Goal:
+E [How much is Eliza's total earnings for the week?]",460.0,M,"[""M"", ""X""]","M = 1 [Overtime multiplier i.e. 1.2 times regular rate]
+X = 2 [Hours spent attending the training session]","Eliza's rate per hour for the first 40 hours she works each week is $10. She also receives an overtime pay for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. However, she also spent hours attending a mandatory, unpaid training session and 1 hour on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E = (P1 * N1) + (P2 * N2) + (P1 * L)"": ""The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate."", ""N2 = N - N1"": ""The number of overtime hours worked is the total hours worked minus the regular hours worked."", ""P2 = M * P1"": ""The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.""}","{""E"": ""Total earnings for the week"", ""L"": ""Lunch break time in hours"", ""M"": ""Overtime multiplier i.e. 1.2 times regular rate"", ""N"": ""Total hours worked"", ""N1"": ""Number of regular hours worked"", ""N2"": ""Number of overtime hours worked"", ""P1"": ""Regular hourly rate in dollars"", ""P2"": ""Overtime hourly rate in dollars"", ""X"": ""Hours spent attending the training session""}",2,78
+"Variables:
+* E [Total earnings for the week]
+* L = 1 [Lunch break time in hours]
+* M = 1 [Overtime multiplier i.e. 1.2 times regular rate]
+* N = 45 [Total hours worked]
+* N1 = 40 [Number of regular hours worked]
+* N2 [Number of overtime hours worked]
+* P1 = 10 [Regular hourly rate in dollars]
+* P2 [Overtime hourly rate in dollars]
+* X = 2 [Hours spent attending the training session]
+
+Equations:
+E = (P1 * N1) + (P2 * N2) + (P1 * L) [The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate.]
+N2 = N - N1 [The number of overtime hours worked is the total hours worked minus the regular hours worked.]
+P2 = M * P1 [The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.]
+
+Goal:
+E [How much is Eliza's total earnings for the week?]",460.0,L,"[""L"", ""X""]","L = 1 [Lunch break time in hours]
+X = 2 [Hours spent attending the training session]","Eliza's rate per hour for the first 40 hours she works each week is $10. She also receives an overtime pay of 1.2 times her regular hourly rate for any hours worked beyond the initial 40. This week, Eliza worked for 45 hours. However, she also spent hours attending a mandatory, unpaid training session and on a paid lunch break. Considering these factors, how much are her earnings for this week?",Unclear,"{""E = (P1 * N1) + (P2 * N2) + (P1 * L)"": ""The total earnings for the week is the sum of regular pay, overtime pay, and pay for the lunch break hours, each calculated by multiplying the number of hours worked by the respective hourly rate."", ""N2 = N - N1"": ""The number of overtime hours worked is the total hours worked minus the regular hours worked."", ""P2 = M * P1"": ""The overtime hourly rate is the regular hourly rate multiplied by the overtime multiplier.""}","{""E"": ""Total earnings for the week"", ""L"": ""Lunch break time in hours"", ""M"": ""Overtime multiplier i.e. 1.2 times regular rate"", ""N"": ""Total hours worked"", ""N1"": ""Number of regular hours worked"", ""N2"": ""Number of overtime hours worked"", ""P1"": ""Regular hourly rate in dollars"", ""P2"": ""Overtime hourly rate in dollars"", ""X"": ""Hours spent attending the training session""}",1,78

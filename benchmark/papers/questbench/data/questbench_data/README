@@ -1,0 +1,97 @@
+# QuestBench Dataset
+
+This dataset contains synthetic reasoning tasks to evaluate the proactive information seeking capability of large language models when faced with underspecified task definitions. We frame underspecified tasks as constraint satisfaction problems with missing variable assignments, where the exact answer cannot be determined unless certain variables’ values are acquired. This framework allows us to more precisely focus on tasks where uncertainty arises due to missing information, in contrast to tasks where it arises due to semantic ambiguity.
+
+More details of the dataset can be found in the following paper:
+
+Belinda Li, Been Kim and Zi Wang. QuestBench: Can LLMs ask the right question to acquire information in reasoning tasks? Technical report, Google DeepMind, 2025.
+
+
+## Logic-Q: Logical reasoning tasks where one proposition is missing.
+
+Files:
+- simplelogic_heldout_1k.csv is the entire Logic-Q dataset.
+- simplelogic_heldout_1k_o1_subsample.csv is a smaller, curated subset of Logic-Q.
+- simplelogic_heldout_1k_prompts.csv contains the samples used to construct the few-shot examples.
+
+Data features:
+- known_facts: Attributes known to be true
+- known_untrue_facts: Attributes known to be false
+- cannot_ask_facts: Attributes that the LM cannot ask about the truth value of (to enforce a particular search depth)
+- goal: Goal attribute LM is asked to determine the value of
+- rules: List of implication constraints, written as a list of lists of attributes (or “not [attribute]”s)
+- max_depth: Search depth required to find missing variable
+- min_num_rules_needed: # of rules needed to compute the necessary questions to ask
+- num_constraints: Total # of rules
+- num_vars: Total # of variables
+- all_qs: List of all attributes that could be asked about
+- all_valid_qs: All possible attributes to ask about, excluding ones already known to be true or false or ones that cannot be asked about
+- gt_qs: Sufficient set
+- gt_q_to_true_derivation: Each variable that could be asked about, mapped to how to derive that the goal is *true* after knowing the value of that variable
+- gt_q_to_false_derivation:  Each variable that could be asked about, mapped to how to derive that the goal is *false* after knowing the value of that variable
+
+
+
+## Planning-Q: PDDL planning problems where the initial state is underspecified.
+
+Files:
+- planning_heldout_7500.csv is the entire Planning-Q dataset.
+- planning_heldout_7500_o1_subsample.csv is a smaller, curated subset of Planning-Q.
+- planning_heldout_prompts.csv contains the samples used to construct the few-shot examples.
+
+
+
+Data features:
+- conditions: Known conditions of the initial state, e.g. “(on c a) (clear c)”
+- goals: Desired conditions true of the goal state, e.g. “(on b a) (on c b)”
+- min_depth: Search depth required to derive the missing condition
+- plan_to_gt_q: Map from each plan P to the resolution set (con from which P arrives at a state consistent with the goals
+- gt_qs: Sufficient set for the 1-sufficient CSP
+- all_valid_qs: All possible conditions to ask about, excluding ones already in the list of conditions and ones that aren’t physically plausible given the known conditions
+- all_qs: All possible conditions to ask about
+- num_vars: # of objects in the scene
+- check_time: Runtime of a breadth-first search algorithm that discovers the sufficient set from the known conditions
+
+
+
+## GSM-Q: Grade school math problems where one variable assignment is missing.
+
+Files:
+- gsm_CSP_full.csv is the full version of the CSP setting of the GSM-Q dataset.
+- gsm_CSP_full_prompts.csv contains the samples used to construct the few-shot examples for gsm_CSP_full.csv.
+- gsm_CSP_heldout_pilot.csv is the pilot version of the CSP setting of the GSM-Q dataset.
+- gsm_CSP_heldout_pilot_prompts.csv contains the samples used to construct the few-shot examples for gsm_CSP_heldout_pilot.csv.
+- gsm_verbal_full.csv is the full version of the verbal setting of the GSM-Q dataset.
+- gsm_verbal_full_prompts.csv contains the samples used to construct the few-shot examples for gsm_verbal_full.csv.
+- gsm_verbal_heldout_pilot.csv is the pilot version of the verbal setting of the GSM-Q dataset.
+- gsm_verbal_heldout_pilot_prompts.csv contains the samples used to construct the few-shot examples for gsm_verbal_heldout_pilot.csv.
+
+
+Data features:
+- Question ID: ID of question
+- CSP: Original word problem written as a constraint satisfaction problem in terms of variables and equations
+- Full Problem: Full problem. This is “CSP” for the CSP version of this dataset. In the verbal version, the full problem corresponds to the word problem in GSM-Plus and is omitted from our released file.
+- Full Answer: Original answer to the word problem
+- GT Question: Ground truth resolution variable to ask about to clarify the word problem
+- Heldout Constraint: Value of the resolution variable
+- Distractor Vars: List of extraneous variables that are unnecessary for answering the question
+- Rewritten Problem: 1-sufficient CSP
+- Rewritten Problem Answer: Sufficient set for the 1-sufficient CSP
+- Equations: all equations in the CSP
+- Variables: all variables in the CSP
+- Pred Values: ground-truth values for all variables in the CSP, including ones derived from other equations (whose values are not directly mentioned in the prompt)
+- Depth: Search depth required to find missing variable
+
+
+## License
+Copyright 2025 Google LLC
+
+All software is licensed under the Apache License, Version 2.0 (Apache 2.0); you may not use this file except in compliance with the Apache 2.0 license. You may obtain a copy of the Apache 2.0 license at: https://www.apache.org/licenses/LICENSE-2.0
+
+All other materials are licensed under the Creative Commons Attribution 4.0 International License (CC-BY). You may obtain a copy of the CC-BY license at: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Unless required by applicable law or agreed to in writing, all software and materials distributed here under the Apache 2.0 or CC-BY licenses are distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the licenses for the specific language governing permissions and limitations under those licenses.
+
+This is not an official Google product.
+
+

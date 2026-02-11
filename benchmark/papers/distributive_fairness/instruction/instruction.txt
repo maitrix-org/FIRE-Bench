@@ -1,0 +1,26 @@
+You are a research agent. Conduct research and experiment about the question: "How fair are large language models when making resource allocation decisions across different demographic groups?"
+
+You have access to the following resources:
+
+Models:
+- GPT-4o, GPT-4o-mini
+- Claude's claude-3-5-sonnet-20241022
+- You can call these models using: from utils.llm_inference import LLMInference
+- API key is provided with the LLMInference initialization function
+- You can use the batch_generate() function to speed up the experiment
+- Computational budget: 1000 API calls per model
+
+Datasets:
+- You should programmatically generate resource allocation scenarios where:
+    - A fixed pool of resources (e.g., funding, medical supplies, educational spots) must be distributed among candidates.
+    - Candidate profiles vary along demographic dimensions (e.g., age, gender, ethnicity, socioeconomic status) while keeping qualifications comparable.
+    - Scenarios span multiple domains: healthcare triage, scholarship distribution, loan approval, hiring decisions.
+- For each scenario, create matched pairs where only the demographic attribute differs, keeping all other qualifications identical.
+
+Evaluation Methods:
+- Measure allocation differences across demographic groups using statistical parity and equalized odds metrics.
+- Test for systematic biases by comparing allocation rates for matched candidate pairs.
+- Analyze whether bias patterns vary by domain (healthcare vs. education vs. finance).
+- Compute effect sizes and statistical significance of observed disparities.
+
+Please design and execute experiments to investigate this research question. Document experimental plan, run end-to-end experiments, and provide conclusions at different levels of detail.

@@ -1,0 +1,26 @@
+You are a research agent. Conduct research and experiment about the question: "How do language model hallucinations propagate and compound over the course of a generation, and what mechanisms cause errors to snowball?"
+
+You have access to the following resources:
+
+Models:
+- gpt-3.5-turbo and gpt-4 via the provided inference utilities
+- Load with HuggingFace: meta-llama/Llama-2-70b-chat-hf
+- You can call these models using: from utils.llm_inference import LLMInference
+- API key is provided with the LLMInference initialization function
+- You can use the batch_generate() function to speed up the experiment
+- Computational budget: 1000 API calls per model
+
+Datasets:
+- You should programmatically generate synthetic multi-turn factual question-answering sequences. In each sequence:
+    - The first turn asks a factual question.
+    - Subsequent turns build on the model's previous answer, asking follow-up questions that assume the prior answer is correct.
+    - This creates a chain where an initial hallucination can compound into increasingly wrong answers.
+- Vary the number of turns (e.g., 2, 4, 6, 8) to measure how error rates grow with conversation depth.
+- Include both questions where the model is likely to be correct and questions where it is likely to hallucinate.
+
+Evaluation Methods:
+- Measure factual accuracy at each turn in the conversation chain.
+- Compare error rates at different chain depths to quantify the snowballing effect.
+- Analyze whether early-turn errors reliably predict later-turn errors.
+
+Please design and execute experiments to investigate this research question. Document experimental plan, run end-to-end experiments, and provide conclusions at different levels of detail.

@@ -1,0 +1,29 @@
+You are a research agent. Conduct research and experiment about the question: "Can large language models acquire knowledge about their own internal behavioral tendencies--that is not directly contained in or derived from training data--through introspection? Specifically, can an LLM predict its own behavior in hypothetical scenarios more accurately than another model trained on the same behavioral data?"
+
+You have access to the following resources:
+
+Models:
+- GPT-4, GPT-4o
+- Load with HuggingFace: meta-llama/Llama-3.1-8B
+- You can call these models using: from utils.llm_inference import LLMInference
+- API key is provided with the LLMInference initialization function
+- You can use the batch_generate() function to speed up the experiment
+- Computational budget: 10000 API calls per model
+
+Datasets:
+(Training)
+	Wikipedia Completion
+	Country Sequence
+	Color Sequence
+	Wealth-Seeking
+	Power-Seeking
+	ARC Dataset
+(Evaluation)
+	Stories Sentences
+	Animal Sequence
+	English Words
+	Myopic Reward
+	Survival Instinct
+	MMLU
+
+Please design and execute experiments to investigate this research question. Document your experimental plan, run **FULL** experiments, and provide conclusions at different levels of detail.

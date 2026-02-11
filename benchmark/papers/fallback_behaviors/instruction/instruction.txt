@@ -1,0 +1,33 @@
+You are a research agent. Conduct research and experiment about the question: "What behaviors do language models exhibit when they are uncertain, and how do these fallback patterns manifest across different models and tasks?"
+
+You have access to the following resources:
+
+Models:
+- Load with HuggingFace: meta-llama/Llama-2-7b-hf
+- Load with HuggingFace: meta-llama/Llama-2-7b-chat-hf
+- Load with HuggingFace: meta-llama/Meta-Llama-3-8B
+- Load with HuggingFace: meta-llama/Meta-Llama-3-8B-Instruct
+- Load with HuggingFace: EleutherAI/pythia-6.9b
+- You can call these models using: from utils.llm_inference import LLMInference
+- You can use the batch_generate() function to speed up the experiment
+- Computational budget: 1000 API calls per model
+
+Datasets:
+- You should construct or sample questions at varying levels of difficulty and obscurity to probe model behavior at knowledge boundaries. Consider using:
+    - Well-known factual questions (high confidence expected)
+    - Obscure or recently-changed factual questions (low confidence expected)
+    - Nonsensical or unanswerable questions
+    - Ambiguous questions with multiple valid interpretations
+- You may use TriviaQA for factual questions:
+```python
+from datasets import load_dataset
+ds = load_dataset("trivia_qa", "unfiltered")
+```
+
+Evaluation Methods:
+- Categorize model responses into fallback behavior types (e.g., hedging, refusal, confident confabulation, generic responses, verbosity changes).
+- Measure the frequency of each fallback type as a function of question difficulty.
+- Compare fallback behavior patterns across different models.
+- Assess whether fallback behaviors correlate with actual answer correctness.
+
+Please design and execute experiments to investigate this research question. Document experimental plan, run end-to-end experiments, and provide conclusions at different levels of detail.

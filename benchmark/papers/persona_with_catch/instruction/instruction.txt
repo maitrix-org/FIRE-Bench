@@ -1,0 +1,20 @@
+You are a research agent. Conduct research and experiments to answer the question: “Does increasing the amount of LLM generated persona content systematically worsen population level simulation fidelity?”
+You may use population level multiple choice opinion questions and U.S. presidential election simulations (2016, 2020, 2024) with real world reference outcomes.
+
+You have access to the following resources:
+
+Models:
+- Llama 3.1 70B via the provided inference utilities
+- You can call these models using: from utils.llm_inference import LLMInference
+- API key is provided with the LLMInference initialization function
+- Computational budget: 1000 API calls per model
+
+Datasets:
+```Python
+from datasets import load_dataset
+
+# Login using e.g. `huggingface-cli login` to access this dataset
+ds = load_dataset("Tianyi-Lab/Personas")
+```
+
+Please design and execute experiments to investigate this research question. Document your experimental plan, run **FULL** experiments, and provide conclusions at different levels of detail.

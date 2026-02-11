@@ -1,0 +1,492 @@
+CSP,Full Answer,GT Question,Possible Questions,Heldout Constraint,Rewritten Problem,Rewritten Problem Answer,Equations,Variables,depth,Question ID
+"Variables:
+* B [Number of emails sent to her boyfriend]
+* F [Number of emails sent to family]
+* R1 [Remaining number of emails after removing the work related emails]
+* R2 [Remaining number of emails after removing the number of emails sent to the family]
+* T = 16 [Total number of emails she sends daily]
+* W = 7 [Number of emails which are work related]
+
+Equations:
+B = 1/3 * R2 [The number of emails sent to boyfriend is one-third the remaining emails]
+F = 2/3 * R1 [The number of emails sent to family are two-thirds the remaining emails(R1)]
+R1 = T - W [The remaining number of emails is given by the difference between the total number of emails sent in a day and the number of emails that are work related]
+R2  = T - W - F [The remaining emails is given by the difference between the total emails, work related emails and the emails sent to the family]
+
+Goal:
+B [Number of emails sent to her boyfriend in a day]",1,W,"[""W""]",W = 7 [Number of emails which are work related],"Robyn sends sixteen emails a day. She also sends five emails about her favorite TV show to a fan club, which she doesn't count in her daily total. After subtracting her work emails from her total, two-thirds of the remainder are to family. She also sends three emails to her local grocery store for a cooking recipe, which she also doesn't count in her daily total. One-third of the remaining emails, after accounting for work and family, are to her boyfriend. How many emails a day does she send to her boyfriend?",Unclear,"{""B = 1/3 * R2"": ""The number of emails sent to boyfriend is one-third the remaining emails"", ""F = 2/3 * R1"": ""The number of emails sent to family are two-thirds the remaining emails(R1)"", ""R1 = T - W"": ""The remaining number of emails is given by the difference between the total number of emails sent in a day and the number of emails that are work related"", ""R2  = T - W - F"": ""The remaining emails is given by the difference between the total emails, work related emails and the emails sent to the family""}","{""B"": ""Number of emails sent to her boyfriend"", ""F"": ""Number of emails sent to family"", ""R1"": ""Remaining number of emails after removing the work related emails"", ""R2"": ""Remaining number of emails after removing the number of emails sent to the family"", ""T"": ""Total number of emails she sends daily"", ""W"": ""Number of emails which are work related""}",4,7654
+"Variables:
+* A = 7 [Total number of apples in the Kelly's cart.]
+* B = 5 [Total number of bacon in the Kelly's cart.]
+* C = 6 [Total number of chicken pack in the Kelly's cart.]
+* C1 = 10 [Total cost of bacon.]
+* M = 5 [Total cost of magzine.]
+* P1 [Cost per bacon.]
+* P2 [Cost per chicken pack.]
+* P3 = 4 [Price per strawberry pack.]
+* P4 [Price per apple.]
+* R [Remaining money left from budget.]
+* S = 3 [Total number of strawberries pack in the Kelly's cart.]
+* T = 65 [Total budget of Kelly.]
+* W = 3 [Cost of water bottle.]
+
+Equations:
+P1= C1/B [Cost per bacon is equal to the total cost of bacon divided by the total number of bacon.]
+P2=2*P1 [Cost per bacon is equal to the twice of the cost per bacon.]
+P4=0.5*P3 [Cost per apple pack is equal to the half of the price per strawberry pack.]
+R=T-C1-C*P2-S*P3-A*P4 [Remaining money left from budget is equal to the total budget minus total cost of the the bacon minus total cost of chicken minus total cost of strawberry minus total cost of apples.]
+
+Goal:
+R [How much money does Kelly have left in her budget?]",5,C1,"[""C1"", ""M"", ""W""]","C1 = 10 [Total cost of bacon.]
+M = 5 [Total cost of magzine.]
+W = 3 [Cost of water bottle.]","Kelly is grocery shopping at a supermarket and is making sure she has enough in her budget for the items in her cart. She has 5 packs of bacon. She also picked up a magazine, but she put it back on the shelf because she decided she didn't need it. She has 6 packets of chicken which each cost twice as much as a pack of bacon. She also has 3 packs of strawberries, priced at $4 each, and 7 packs of apples, each priced at half the price of a pack of strawberries. She also considered buying a bottle of water, but decided against it. If Kelly’s budget is $65 then how much money, in dollars, does she have left in her budget?",Unclear,"{""P1= C1/B"": ""Cost per bacon is equal to the total cost of bacon divided by the total number of bacon."", ""P2=2*P1"": ""Cost per bacon is equal to the twice of the cost per bacon."", ""P4=0.5*P3"": ""Cost per apple pack is equal to the half of the price per strawberry pack."", ""R=T-C1-C*P2-S*P3-A*P4"": ""Remaining money left from budget is equal to the total budget minus total cost of the the bacon minus total cost of chicken minus total cost of strawberry minus total cost of apples.""}","{""A"": ""Total number of apples in the Kelly's cart."", ""B"": ""Total number of bacon in the Kelly's cart."", ""C"": ""Total number of chicken pack in the Kelly's cart."", ""C1"": ""Total cost of bacon."", ""M"": ""Total cost of magzine."", ""P1"": ""Cost per bacon."", ""P2"": ""Cost per chicken pack."", ""P3"": ""Price per strawberry pack."", ""P4"": ""Price per apple."", ""R"": ""Remaining money left from budget."", ""S"": ""Total number of strawberries pack in the Kelly's cart."", ""T"": ""Total budget of Kelly."", ""W"": ""Cost of water bottle.""}",3,7062
+"Variables:
+* A1 = 26 [Fee for each adult at the first amusement park]
+* A2 = 14 [Fee for each adult at the second amusement park]
+* AD = 2 [Number of adults in Jake's family]
+* C1 = 12 [Fee for each child at the first amusement park]
+* C2 = 10 [Fee for each child at the second amusement park]
+* CAR1 = 5 [Included carousel ticket for each adult at the first amusement park]
+* CH = 2 [Number of children in Jake's family]
+* S [Amount saved by choosing the second amusement park]
+* T1 [Total cost for the family at the first amusement parK]
+* T2 [Total cost for the family at the second amusement park]
+
+Equations:
+S = T1-T2 [The amount saved by choosing the second amusement park is the difference between the total costs of first amusement park and second amusement park.]
+T1 = (A1 * AD) + (C1 * CH) [Total cost for the first amusement park is the sum of adult fees (including carousel ticket) and child fees.]
+T2 = (A2 * AD) + (C2 * CH) [Total cost for the second amusement park is the sum of adult fees and child fees.]
+
+Goal:
+S [How much did Jake's family save if they choose the second amusement park over the first?]",28,C2,"[""C2"", ""CAR1""]","C2 = 10 [Fee for each child at the second amusement park]
+CAR1 = 5 [Included carousel ticket for each adult at the first amusement park]","Jake's family wants to compare the cost of the two different amusement parks. The first amusement park has a $26 fee for each adult, and a $12 fee for each child; while the second amusement park has a $14 fee for each adult. If there are 2 adults and 2 children in their family, how much will they be able to save if they choose the second amusement park over the first?",Unclear,"{""S = T1-T2"": ""The amount saved by choosing the second amusement park is the difference between the total costs of first amusement park and second amusement park."", ""T1 = (A1 * AD) + (C1 * CH)"": ""Total cost for the first amusement park is the sum of adult fees (including carousel ticket) and child fees."", ""T2 = (A2 * AD) + (C2 * CH)"": ""Total cost for the second amusement park is the sum of adult fees and child fees.""}","{""A1"": ""Fee for each adult at the first amusement park"", ""A2"": ""Fee for each adult at the second amusement park"", ""AD"": ""Number of adults in Jake's family"", ""C1"": ""Fee for each child at the first amusement park"", ""C2"": ""Fee for each child at the second amusement park"", ""CAR1"": ""Included carousel ticket for each adult at the first amusement park"", ""CH"": ""Number of children in Jake's family"", ""S"": ""Amount saved by choosing the second amusement park"", ""T1"": ""Total cost for the family at the first amusement parK"", ""T2"": ""Total cost for the family at the second amusement park""}",2,5974
+"Variables:
+* C = 12 [Cost of cord for each class officers]
+* E = 0.2 [Percentage that increase the cost of frame after etching the logo]
+* F1 = 20 [Cost of each picture frame]
+* F2 [Cost of frame after etching the logo]
+* J = 100 [Number of juniors in the school]
+* M = 2 [Number of seniors who are chess club members]
+* O [Number of seniors who are class officers]
+* P = 5 [Cost of pin for each chess club members]
+* S = 44 [Number of seniors in the school]
+* T [Total amount spent on senior gifts]
+
+Equations:
+F2 = F1 + (E * F1) [The final cost of the frame is the initial cost of the frame plus the cost of etching the logo in the frame.]
+O = (1 / 4) * S [The number of senior class officers are one fourth of the total number of seniors.]
+T = (S * F2) + (M * P) + (O * C) [The total amount spent on senior gifts is the sum of the cost of etched picture frames for all the seniors, the cost of pins for each seniors who are chess club members, and the cost of cords for each seniors who are class officers.]
+
+Goal:
+T [How much amount will be spent on senior gifts?]",1198,M,"[""M"", ""J""]","M = 2 [Number of seniors who are chess club members]
+J = 100 [Number of juniors in the school]","In a school, there are 44 seniors. Each senior needs to receive an award, which is a picture frame that costs $20. The picture frames need to be etched with the school's logo, which increases the cost by 20% per frame. Among the seniors, there are also members of the school's chess club and will receive additional pins that cost $5 each. Meanwhile, 1/4 of the seniors are class officers and they will need to receive cords that cost $12 each. The juniors will not receive any awards this year. How much will be spent on the senior gifts?
+",Unclear,"{""F2 = F1 + (E * F1)"": ""The final cost of the frame is the initial cost of the frame plus the cost of etching the logo in the frame."", ""O = (1 / 4) * S"": ""The number of senior class officers are one fourth of the total number of seniors."", ""T = (S * F2) + (M * P) + (O * C)"": ""The total amount spent on senior gifts is the sum of the cost of etched picture frames for all the seniors, the cost of pins for each seniors who are chess club members, and the cost of cords for each seniors who are class officers.""}","{""C"": ""Cost of cord for each class officers"", ""E"": ""Percentage that increase the cost of frame after etching the logo"", ""F1"": ""Cost of each picture frame"", ""F2"": ""Cost of frame after etching the logo"", ""J"": ""Number of juniors in the school"", ""M"": ""Number of seniors who are chess club members"", ""O"": ""Number of seniors who are class officers"", ""P"": ""Cost of pin for each chess club members"", ""S"": ""Number of seniors in the school"", ""T"": ""Total amount spent on senior gifts""}",1,2958
+"Variables:
+* A [Total amount paid by you after adding the tip]
+* B = 50 [Total dinner bill after the discount]
+* D = 0.1 [Discount rate on the meal price]
+* P [Price of the extra bill]
+* S [Half of the discounted bill amount each person pays]
+* T = 0.2 [Tip rate on the discounted bill]
+
+Equations:
+A=S+P [The total payment is your half of the discounted bill plus a 20% tip on the total discounted bill.]
+P=T * B [The tip bill is the original price multiplied by the 20% tip]
+S= B/2 [Each person’s share of the discounted bill is half of the total after the discount.]
+
+Goal:
+A [How much did the husband end up paying?]",35,T,"[""T"", ""D""]","T = 0.2 [Tip rate on the discounted bill]
+D = 0.1 [Discount rate on the meal price]","My wife and I went out for dinner at a restaurant that was offering a discount on their meals. After applying the discount, our dinner bill came to $50. We decided to evenly split the check. How much did I end up paying?",Unclear,"{""A=S+P"": ""The total payment is your half of the discounted bill plus a 20% tip on the total discounted bill."", ""P=T * B"": ""The tip bill is the original price multiplied by the 20% tip"", ""S= B/2"": ""Each person\u2019s share of the discounted bill is half of the total after the discount.""}","{""A"": ""Total amount paid by you after adding the tip"", ""B"": ""Total dinner bill after the discount"", ""D"": ""Discount rate on the meal price"", ""P"": ""Price of the extra bill"", ""S"": ""Half of the discounted bill amount each person pays"", ""T"": ""Tip rate on the discounted bill""}",2,4318
+"Variables:
+* A = 50 [Adam's total points]
+* B [Betty's total points]
+* M [Martha's total points]
+* P = 400 [Minimum points required for the trip]
+* Q = 20 [Points Adam collected for actively answering questions]
+* R [Points the class is missing to reach the minimum threshold]
+* T [Tom's total points]
+
+Equations:
+B = A + (0.3 * A) [Betty's total points are 30 percent of Adam's points plus Adam's original point.]
+M = 3 * T [Martha's points are three times more than Tom's points.]
+R = P - (A + M + B + T) [The points the class is missing to reach the minimum threshold is the difference between the required minimum points and the sum of the points collected by Adam, Martha, Betty, and Tom.]
+T = B - 30 [Tom's points are 30 points less than Betty's points.]
+
+Goal:
+R [How many points is the class missing to reach the minimum threshold?]",145,P,"[""P"", ""Q""]","P = 400 [Minimum points required for the trip]
+Q = 20 [Points Adam collected for actively answering questions]","Students in class 3B are collecting school points for behavior. If they get enough points in total, they can go on a trip. In the class, there are Adam, Martha, Betty, and Tom. Adam has collected 50 points. Betty was better than Adam and collected 30% more. Marta managed to collect 3 times more points than Tom, who had 30 points less than Betty. How many points is the class missing to go on the trip?",Unclear,"{""B = A + (0.3 * A)"": ""Betty's total points are 30 percent of Adam's points plus Adam's original point."", ""M = 3 * T"": ""Martha's points are three times more than Tom's points."", ""R = P - (A + M + B + T)"": ""The points the class is missing to reach the minimum threshold is the difference between the required minimum points and the sum of the points collected by Adam, Martha, Betty, and Tom."", ""T = B - 30"": ""Tom's points are 30 points less than Betty's points.""}","{""A"": ""Adam's total points"", ""B"": ""Betty's total points"", ""M"": ""Martha's total points"", ""P"": ""Minimum points required for the trip"", ""Q"": ""Points Adam collected for actively answering questions"", ""R"": ""Points the class is missing to reach the minimum threshold"", ""T"": ""Tom's total points""}",1,5574
+"Variables:
+* C = 3 [Total number of cites.]
+* D [Total days after which servicing is required.]
+* D1 = 75 [Distance from city 1 to city 2 in miles.]
+* D2 = 100 [Distance from city 2 to city 3 in miles.]
+* D3 [Distance from city 3 to city 1 in miles.]
+* S = 18000 [Total miles after which servicing is required.]
+* T [Total distance travel in a day.]
+* T1 = 3 [Total number of trips in a day.]
+* T2 = 8 [Total hours in a single trip.]
+
+Equations:
+D3=D1+D2-50 [Total distance from city 3 to city 1 is equal to the distance from city 1 to city 2 plus distance from city 2 to city minus 50.]
+D=S/T [Total number of days s equal to the total miles required for servicing divided by total miles traveled in one day.]
+T=T1*(D1+D2+D3) [Total distance travel in day is equal to the total trip number times total distance in one trip.]
+
+Goal:
+D [How many days does it go between services?]",20,S,"[""S"", ""C"", ""T2""]","S = 18000 [Total miles after which servicing is required.]
+C = 3 [Total number of cites.]
+T2 = 8 [Total hours in a single trip.]","A train travels between different cities. It goes 75 miles from the first city to the second city, 100 miles from the second city to the third city, and 50 miles less than that combined distance to go from the third city to the first city. It does this trip 3 times a day. How many days does it go between services?",Unclear,"{""D3=D1+D2-50"": ""Total distance from city 3 to city 1 is equal to the distance from city 1 to city 2 plus distance from city 2 to city minus 50."", ""D=S/T"": ""Total number of days s equal to the total miles required for servicing divided by total miles traveled in one day."", ""T=T1*(D1+D2+D3)"": ""Total distance travel in day is equal to the total trip number times total distance in one trip.""}","{""C"": ""Total number of cites."", ""D"": ""Total days after which servicing is required."", ""D1"": ""Distance from city 1 to city 2 in miles."", ""D2"": ""Distance from city 2 to city 3 in miles."", ""D3"": ""Distance from city 3 to city 1 in miles."", ""S"": ""Total miles after which servicing is required."", ""T"": ""Total distance travel in a day."", ""T1"": ""Total number of trips in a day."", ""T2"": ""Total hours in a single trip.""}",1,2894
+"Variables:
+* C = 4 [Amount of root beer drank by children]
+* F = 5 [Amount of root beer drank by Ronnie]
+* N [Amount of root beer per person at the party]
+* P = 3 [Number of people that showed up at the party]
+* R [Remaining root beer after all consumption]
+* T = 24 [Initial amount of root beer in gallons]
+* W = 7 [Amount of root beer spilled by wife]
+* X = 10 [Amount of gallon Fred's neighbor watered his garden]
+* Y = 15 [Number of points Fred's children scored at a game]
+
+Equations:
+N = R / (P+1) [The amount of root beer each person gets at the party is equal to the remaining root beer divided by the total number of people at the party (P + 1, including Fred).]
+R = T - (C + W + F) [The remaining root beer is equal to the total amount of root beer minus the amounts consumed or spilled by the children, wife, and friend.]
+
+Goal:
+N [How much root beer was there for each person at the party?]",2,P,"[""P"", ""X"", ""Y""]","P = 3 [Number of people that showed up at the party]
+X = 10 [Amount of gallon Fred's neighbor watered his garden]
+Y = 15 [Number of points Fred's children scored at a game]","Fred was preparing for a party to be held in four days. On the first day, he made 24 gallons of root beer and put them in the refrigerator cooler. That evening, his children discovered the root beer and drank 4 gallons. On the second day, his wife Barbie found the root beer and accidentally spilled 7 gallons. Meanwhile, Fred's neighbor, who was watering his garden, used water, which has no impact on the root beer situation. On the third day, Fred's friend Ronnie visited and helped himself to the root beer, reducing the amount remaining by 5 gallons. On the same day, Fred's children played a game, which doesn't affect the root beer quantity. On the fourth day, people showed up for the party. If Fred and the others shared the remaining root beer equally, how much was available for each to drink during the party?",Unclear,"{""N = R / (P+1)"": ""The amount of root beer each person gets at the party is equal to the remaining root beer divided by the total number of people at the party (P + 1, including Fred)."", ""R = T - (C + W + F)"": ""The remaining root beer is equal to the total amount of root beer minus the amounts consumed or spilled by the children, wife, and friend.""}","{""C"": ""Amount of root beer drank by children"", ""F"": ""Amount of root beer drank by Ronnie"", ""N"": ""Amount of root beer per person at the party"", ""P"": ""Number of people that showed up at the party"", ""R"": ""Remaining root beer after all consumption"", ""T"": ""Initial amount of root beer in gallons"", ""W"": ""Amount of root beer spilled by wife"", ""X"": ""Amount of gallon Fred's neighbor watered his garden"", ""Y"": ""Number of points Fred's children scored at a game""}",1,9598
+"Variables:
+* C = 12 [Cost of cord for each class officers]
+* E = 0.2 [Percentage that increase the cost of frame after etching the logo]
+* F1 = 20 [Cost of each picture frame]
+* F2 [Cost of frame after etching the logo]
+* J = 100 [Number of juniors in the school]
+* M = 2 [Number of seniors who are chess club members]
+* O [Number of seniors who are class officers]
+* P = 5 [Cost of pin for each chess club members]
+* S = 44 [Number of seniors in the school]
+* T [Total amount spent on senior gifts]
+
+Equations:
+F2 = F1 + (E * F1) [The final cost of the frame is the initial cost of the frame plus the cost of etching the logo in the frame.]
+O = (1 / 4) * S [The number of senior class officers are one fourth of the total number of seniors.]
+T = (S * F2) + (M * P) + (O * C) [The total amount spent on senior gifts is the sum of the cost of etched picture frames for all the seniors, the cost of pins for each seniors who are chess club members, and the cost of cords for each seniors who are class officers.]
+
+Goal:
+T [How much amount will be spent on senior gifts?]",1198,M,"[""M"", ""J""]","M = 2 [Number of seniors who are chess club members]
+J = 100 [Number of juniors in the school]","In a school, there are 44 seniors. Each senior needs to receive an award, which is a picture frame that costs $20. The picture frames need to be etched with the school's logo, which increases the cost by 20% per frame. Among the seniors, the members of the school's chess club and will receive additional pins that cost $5 each. Meanwhile, 1/4 of the seniors are class officers and they will need to receive cords that cost $12 each. The juniors will not receive any awards this year. How much will be spent on the senior gifts?",Unclear,"{""F2 = F1 + (E * F1)"": ""The final cost of the frame is the initial cost of the frame plus the cost of etching the logo in the frame."", ""O = (1 / 4) * S"": ""The number of senior class officers are one fourth of the total number of seniors."", ""T = (S * F2) + (M * P) + (O * C)"": ""The total amount spent on senior gifts is the sum of the cost of etched picture frames for all the seniors, the cost of pins for each seniors who are chess club members, and the cost of cords for each seniors who are class officers.""}","{""C"": ""Cost of cord for each class officers"", ""E"": ""Percentage that increase the cost of frame after etching the logo"", ""F1"": ""Cost of each picture frame"", ""F2"": ""Cost of frame after etching the logo"", ""J"": ""Number of juniors in the school"", ""M"": ""Number of seniors who are chess club members"", ""O"": ""Number of seniors who are class officers"", ""P"": ""Cost of pin for each chess club members"", ""S"": ""Number of seniors in the school"", ""T"": ""Total amount spent on senior gifts""}",1,2958
+"Variables:
+* C = 2 [Number of chess club members]
+* CO [Number of seniors that are class officers]
+* D = 12 [Cost of cords per class officer]
+* E [Cost of etching per frame]
+* F = 20 [Cost per frame]
+* FC [Cost for each frame gift]
+* G [Total cost of all gifts]
+* J = 100 [Number of juniors]
+* P = 5 [Cost of chess club pins each]
+* S = 44 [Number of seniors]
+* TD [Total cost of cords for all class officers]
+* TF [Total cost of frame gifts for all seniors]
+* TP [Total cost of chess club pins]
+
+Equations:
+CO = S / 4 [Number of seniors that are class officers equals number of seniors divided by four.]
+E = F * 0.2 [Cost of etching per frame equals the cost of the frame times twenty percent.]
+FC = F + E [Cost for each frame gift equals the cost per frame plus the cost of etching per frame]
+G = TF + TP + TD [Total cost of all gifts equals total cost of frame gifts plus total cost of chess club pins plus total cost of cords for all class officers.]
+TD = CO * D [Total cost of cords for all class officers equals the number of seniors that are class officers times the cost of cords per class officer.]
+TF = FC * S [Total cost of frame gifts for all seniors equals cost for each frame gift times the number of seniors.]
+TP = C * P [Total cost of chess club pins equals number of chess club members times cost of chess club pins.]
+
+Goal:
+G [How much will be spent on the senior gifts?]",1198,S,"[""S"", ""J""]","S = 44 [Number of seniors]
+J = 100 [Number of juniors]","In a school, each senior needs to receive an award, which is a picture frame that costs $20. The picture frames need to be etched with the school's logo, which increases the cost by 20% per frame. Among the seniors, 2 of them are also members of the school's chess club and will receive additional pins that cost $5 each. Meanwhile, 1/4 of the seniors are class officers and they will need to receive cords that cost $12 each. The juniors will not receive any awards this year. How much will be spent on the senior gifts?",Unclear,"{""CO = S / 4"": ""Number of seniors that are class officers equals number of seniors divided by four."", ""E = F * 0.2"": ""Cost of etching per frame equals the cost of the frame times twenty percent."", ""FC = F + E"": ""Cost for each frame gift equals the cost per frame plus the cost of etching per frame"", ""G = TF + TP + TD"": ""Total cost of all gifts equals total cost of frame gifts plus total cost of chess club pins plus total cost of cords for all class officers."", ""TD = CO * D"": ""Total cost of cords for all class officers equals the number of seniors that are class officers times the cost of cords per class officer."", ""TF = FC * S"": ""Total cost of frame gifts for all seniors equals cost for each frame gift times the number of seniors."", ""TP = C * P"": ""Total cost of chess club pins equals number of chess club members times cost of chess club pins.""}","{""C"": ""Number of chess club members"", ""CO"": ""Number of seniors that are class officers"", ""D"": ""Cost of cords per class officer"", ""E"": ""Cost of etching per frame"", ""F"": ""Cost per frame"", ""FC"": ""Cost for each frame gift"", ""G"": ""Total cost of all gifts"", ""J"": ""Number of juniors"", ""P"": ""Cost of chess club pins each"", ""S"": ""Number of seniors"", ""TD"": ""Total cost of cords for all class officers"", ""TF"": ""Total cost of frame gifts for all seniors"", ""TP"": ""Total cost of chess club pins""}",3,2958
+"Variables:
+* A [Total amount paid for the shirts after applying the discount]
+* D = 0.4 [Discount rate applied to the shirts]
+* N = 2 [Number of shirts bought]
+* P = 30 [Price of one shirt]
+* S [Total cost of two shirts]
+* X = 50 [Price of a pair of shoes]
+
+Equations:
+A = S - (D * S) [The amount Davos paid after the discount is the original cost of the shirt minus the discount applied to it.]
+S = N * P [The cost of two shirts is the number of shirts purchased multiplied by the price per shirt.]
+
+Goal:
+A [How much did Davos pay for 2 shirts after the discount?]",36,N,"[""N"", ""X""]","N = 2 [Number of shirts bought]
+X = 50 [Price of a pair of shoes]","Davos went to the mall and bought shirts that cost $30 each. He also saw a pair of shoes that he liked but he decided not to buy them. Instead, he bought the shirts with a 40% discount. How much did Davos pay for the shirts?
+
+",Unclear,"{""A = S - (D * S)"": ""The amount Davos paid after the discount is the original cost of the shirt minus the discount applied to it."", ""S = N * P"": ""The cost of two shirts is the number of shirts purchased multiplied by the price per shirt.""}","{""A"": ""Total amount paid for the shirts after applying the discount"", ""D"": ""Discount rate applied to the shirts"", ""N"": ""Number of shirts bought"", ""P"": ""Price of one shirt"", ""S"": ""Total cost of two shirts"", ""X"": ""Price of a pair of shoes""}",2,2782
+"Variables:
+* C = 3 [Total number of cites.]
+* D [Total days after which servicing is required.]
+* D1 = 75 [Distance from city 1 to city 2 in miles.]
+* D2 = 100 [Distance from city 2 to city 3 in miles.]
+* D3 [Distance from city 3 to city 1 in miles.]
+* S = 18000 [Total miles after which servicing is required.]
+* T [Total distance travel in a day.]
+* T1 = 3 [Total number of trips in a day.]
+* T2 = 8 [Total hours in a single trip.]
+
+Equations:
+D3=D1+D2-50 [Total distance from city 3 to city 1 is equal to the distance from city 1 to city 2 plus distance from city 2 to city minus 50.]
+D=S/T [Total number of days s equal to the total miles required for servicing divided by total miles traveled in one day.]
+T=T1*(D1+D2+D3) [Total distance travel in day is equal to the total trip number times total distance in one trip.]
+
+Goal:
+D [How many days does it go between services?]",20,S,"[""S"", ""C"", ""T2""]","S = 18000 [Total miles after which servicing is required.]
+C = 3 [Total number of cites.]
+T2 = 8 [Total hours in a single trip.]","A train travels between cities. It goes 75 miles from the first city to the second city, 100 miles from the second city to the third city, and 50 miles less than that combined distance to go from the third city to the first city. It does this trip 3 times a day. How many days does it go between services?
+
+",Unclear,"{""D3=D1+D2-50"": ""Total distance from city 3 to city 1 is equal to the distance from city 1 to city 2 plus distance from city 2 to city minus 50."", ""D=S/T"": ""Total number of days s equal to the total miles required for servicing divided by total miles traveled in one day."", ""T=T1*(D1+D2+D3)"": ""Total distance travel in day is equal to the total trip number times total distance in one trip.""}","{""C"": ""Total number of cites."", ""D"": ""Total days after which servicing is required."", ""D1"": ""Distance from city 1 to city 2 in miles."", ""D2"": ""Distance from city 2 to city 3 in miles."", ""D3"": ""Distance from city 3 to city 1 in miles."", ""S"": ""Total miles after which servicing is required."", ""T"": ""Total distance travel in a day."", ""T1"": ""Total number of trips in a day."", ""T2"": ""Total hours in a single trip.""}",1,2894
+"Variables:
+* F1 = 20 [Number of times the first friend pressed the doorbell]
+* F2 [Number of times the second friend pressed the doorbell]
+* F3 [Number of times the third friend pressed the doorbell]
+* F4 = 60 [Number of times the fourth friend pressed the doorbell]
+* P = 5 [Number of times the parrot attempted to peck at the doorbell]
+* T [Total number of times the doorbell rang]
+
+Equations:
+F2 = F1 + ((1 / 4) * F1 ) [The number of times the second friend presses the doorbell is the number of times the first friend presses it, plus one-fourth of that number]
+F3 = F4 + 10 [The number of times the third friend presses the doorbell is 10 more than the number of times the fourth friend presses it.]
+T = F1 + F2 + F3 + F4 [The total number of doorbell rings is the sum of the rings made by the first, second, third, and fourth friends.]
+
+Goal:
+T [How many times did the doorbell ring?]",175,F4,"[""F4"", ""P""]","F4 = 60 [Number of times the fourth friend pressed the doorbell]
+P = 5 [Number of times the parrot attempted to peck at the doorbell]","On a particular day, Jerome had 4 friends who came to visit him. The first friend, who was wearing a red hat, pressed on the doorbell 20 times before Jerome opened the door. The second friend, who arrived 30 minutes later and was wearing a blue hat, pressed on the doorbell 1/4 times more than Jerome's first friend. The third friend, who was carrying a green umbrella, pressed on the doorbell 10 times more than the fourth friend, who was wearing a yellow scarf. If the fourth friend had a pet parrot with him, how many doorbell rings did the doorbell make?",Unclear,"{""F2 = F1 + ((1 / 4) * F1 )"": ""The number of times the second friend presses the doorbell is the number of times the first friend presses it, plus one-fourth of that number"", ""F3 = F4 + 10"": ""The number of times the third friend presses the doorbell is 10 more than the number of times the fourth friend presses it."", ""T = F1 + F2 + F3 + F4"": ""The total number of doorbell rings is the sum of the rings made by the first, second, third, and fourth friends.""}","{""F1"": ""Number of times the first friend pressed the doorbell"", ""F2"": ""Number of times the second friend pressed the doorbell"", ""F3"": ""Number of times the third friend pressed the doorbell"", ""F4"": ""Number of times the fourth friend pressed the doorbell"", ""P"": ""Number of times the parrot attempted to peck at the doorbell"", ""T"": ""Total number of times the doorbell rang""}",2,806
+"Variables:
+* D1 = 3 [Number of days on low setting]
+* D2 = 3 [Number of days on medium setting]
+* D3 = 5 [Number of days on high setting]
+* H [Amount of water removed per day on high setting in liters]
+* L = 1 [Amount of water removed per day on low setting in liters]
+* M [Amount of water removed per day on medium setting in liters]
+* N = 0.2 [Percentage of increase in noise level]
+* T [Total amount of water removed in liters]
+
+Equations:
+H = 2 * M [The amount of water removed on the high setting is twice the amount of water removed on the medium setting.]
+M = 2 * L [The amount of water removed on the medium setting is twice the amount of water removed on the low setting.]
+T = (D1 * L) + (D2 * M) + (D3 * H) [The total amount of water removed is the sum of the water removed on the low, medium, and high settings, calculated by multiplying the water removed per day by the number of days for each setting.]
+
+Goal:
+T [What is the total amount of water removed from the air in Brian's basement in liters]",29,L,"[""L"", ""N""]","L = 1 [Amount of water removed per day on low setting in liters]
+N = 0.2 [Percentage of increase in noise level]","Brian's basement was damp and musty, so he bought a dehumidifier to remove moisture out of the air. The device has three speeds: low, medium, and high. Brian tested the device's efficiency and he found that the low setting removes water out of the air per day, the medium setting removes twice as much water per day as the low setting, and the high setting removes twice as much water per day as the medium setting. Brian also noticed that the dehumidifier's noise level increased, but this did not affect its efficiency. If Brian ran the dehumidifier for 3 days on the low setting, then an additional 3 days on the medium setting, and then an additional 5 days on the high setting, while occasionally changing the noise level, what is the total amount of water that the dehumidifier removed from the air in his basement, in liters?",Unclear,"{""H = 2 * M"": ""The amount of water removed on the high setting is twice the amount of water removed on the medium setting."", ""M = 2 * L"": ""The amount of water removed on the medium setting is twice the amount of water removed on the low setting."", ""T = (D1 * L) + (D2 * M) + (D3 * H)"": ""The total amount of water removed is the sum of the water removed on the low, medium, and high settings, calculated by multiplying the water removed per day by the number of days for each setting.""}","{""D1"": ""Number of days on low setting"", ""D2"": ""Number of days on medium setting"", ""D3"": ""Number of days on high setting"", ""H"": ""Amount of water removed per day on high setting in liters"", ""L"": ""Amount of water removed per day on low setting in liters"", ""M"": ""Amount of water removed per day on medium setting in liters"", ""N"": ""Percentage of increase in noise level"", ""T"": ""Total amount of water removed in liters""}",3,9678
+"Variables:
+* A1 [Total number of vote gotten by Candidate A.]
+* B0 = 0.5 [Amount of Carbon footprint promised by candidate B to reduce.]
+* B1 [Total number of vote gotten by Candidate B.]
+* C0 = 0.3 [Amount increase in the school's budget for sports promised by candidate C.]
+* C1 [Total number of vote gotten by Candidate C.]
+* K = 22 [Temperature of the place during school assembly.]
+* T = 100 [Total Number of voters.]
+
+Equations:
+A1=0.2*100 [Total number of vote gotten by Candidate A is equal to 20 percent of the total number of vote which is 100.]
+B1=A1+(0.5*A1) [Total number of vote gotten by Candidate B is equal to 50 percent more than the total number of vote gotten by candidate A.]
+C1=T-A1-B1 [Total number of vote gotten by Candidate C is equal to total number of vote minus total number of vote gotten by Candidate A minus total number of vote gotten by Candidate B.]
+
+Goal:
+C1 [How many votes did candidate C get?]",50,T,"[""T"", ""B0"", ""C0"", ""K""]","T = 100 [Total Number of voters.]
+B0 = 0.5 [Amount of Carbon footprint promised by candidate B to reduce.]
+C0 = 0.3 [Amount increase in the school's budget for sports promised by candidate C.]
+K = 22 [Temperature of the place during school assembly.]","In a student council election, candidate A got 20% of the votes. Candidate B got 50% more votes than candidate A. Candidate C got the rest of the votes. How many votes did candidate C get?",Unclear,"{""A1=0.2*100"": ""Total number of vote gotten by Candidate A is equal to 20 percent of the total number of vote which is 100."", ""B1=A1+(0.5*A1)"": ""Total number of vote gotten by Candidate B is equal to 50 percent more than the total number of vote gotten by candidate A."", ""C1=T-A1-B1"": ""Total number of vote gotten by Candidate C is equal to total number of vote minus total number of vote gotten by Candidate A minus total number of vote gotten by Candidate B.""}","{""A1"": ""Total number of vote gotten by Candidate A."", ""B0"": ""Amount of Carbon footprint promised by candidate B to reduce."", ""B1"": ""Total number of vote gotten by Candidate B."", ""C0"": ""Amount increase in the school's budget for sports promised by candidate C."", ""C1"": ""Total number of vote gotten by Candidate C."", ""K"": ""Temperature of the place during school assembly."", ""T"": ""Total Number of voters.""}",1,990
+"Variables:
+* A = 75 [Distance from the first city to the second city]
+* B = 100 [Distance from the second city to the third city]
+* C [Distance from the third city to the first city]
+* D = 3 [Number of trips per day]
+* H = 8 [Hour per trip]
+* N [Number of days between services]
+* R [Total distance for one full round trip]
+* S = 18000 [Total distance after which the train needs service]
+* T [Total distance traveled in one day]
+
+Equations:
+C = ( A + B) - 50 [The distance from the third city to the first city is the sum of the distances from the first city to the second city and from the second city to the third city, minus 50 miles.""]
+N = S / T [The number of days between services is the total distance after which the train needs service divided by the total distance traveled in one day.]
+R = A + B + C [The total distance for one round trip is the sum of the distances between the first city to the second city, the second city to the third city, and the third city back to the first city.]
+T = R * D [The total distance traveled in one day is the total distance for one round trip multiplied by the number of trips made per day.]
+
+Goal:
+N [How many days are there between services?]",20,B,"[""B"", ""H""]","B = 100 [Distance from the second city to the third city]
+H = 8 [Hour per trip]","A train travels between cities. It goes 75 miles from the first city to the second city, from the second city to the third city, and 50 miles less than that combined distance to go from the third city to the first city. It does this trip 3 times a day. The train needs service every 18,000 miles so how many days does it go between services?
+",Unclear,"{""C = ( A + B) - 50"": ""The distance from the third city to the first city is the sum of the distances from the first city to the second city and from the second city to the third city, minus 50 miles.\"""", ""N = S / T"": ""The number of days between services is the total distance after which the train needs service divided by the total distance traveled in one day."", ""R = A + B + C"": ""The total distance for one round trip is the sum of the distances between the first city to the second city, the second city to the third city, and the third city back to the first city."", ""T = R * D"": ""The total distance traveled in one day is the total distance for one round trip multiplied by the number of trips made per day.""}","{""A"": ""Distance from the first city to the second city"", ""B"": ""Distance from the second city to the third city"", ""C"": ""Distance from the third city to the first city"", ""D"": ""Number of trips per day"", ""H"": ""Hour per trip"", ""N"": ""Number of days between services"", ""R"": ""Total distance for one full round trip"", ""S"": ""Total distance after which the train needs service"", ""T"": ""Total distance traveled in one day""}",4,2894
+"Variables:
+* IR = 1 [Denomination of coin Rong saves each month in his piggy bank]
+* N [No. of Coins Neil saves per month]
+* R = 20 [No. of Coins Rong saves per month]
+* T = 10 [Total no. of years they both will save coins for]
+* TC [Total no. of coins at the end of 10 years with Rong and Neil]
+* Y = 12 [No. of months in 1 year]
+
+Equations:
+N = R + (R * 0.40) [No. of Coins Neil saves per month is equal to 2/5 times (or 0.40%) more coins in his piggy bank per month than Rong]
+TC = (R + N) * Y * T [Total no. of coins at the end of 10 years with Rong and Neil is equal to the sum of the total coins saved by both of them times no. of months in 1 year times total no. of years they both will save coins for]
+
+Goal:
+TC [How many coins do Rong and Neil will have in ten years after they started their savings?]",5760,R,"[""R"", ""IR""]","R = 20 [No. of Coins Rong saves per month]
+IR = 1 [Denomination of coin Rong saves each month in his piggy bank]",Rong has been saving in his piggy bank every month. Neil has been saving 2/5 times more coins in his piggy bank per month than Rong. How many coins do they have ten years after they started their savings?,Unclear,"{""N = R + (R * 0.40)"": ""No. of Coins Neil saves per month is equal to 2/5 times (or 0.40%) more coins in his piggy bank per month than Rong"", ""TC = (R + N) * Y * T"": ""Total no. of coins at the end of 10 years with Rong and Neil is equal to the sum of the total coins saved by both of them times no. of months in 1 year times total no. of years they both will save coins for""}","{""IR"": ""Denomination of coin Rong saves each month in his piggy bank"", ""N"": ""No. of Coins Neil saves per month"", ""R"": ""No. of Coins Rong saves per month"", ""T"": ""Total no. of years they both will save coins for"", ""TC"": ""Total no. of coins at the end of 10 years with Rong and Neil"", ""Y"": ""No. of months in 1 year""}",2,5526
+"Variables:
+* A = 7 [Total number of apples in the Kelly's cart.]
+* B = 5 [Total number of bacon in the Kelly's cart.]
+* C = 6 [Total number of chicken pack in the Kelly's cart.]
+* C1 = 10 [Total cost of bacon.]
+* M = 5 [Total cost of magzine.]
+* P1 [Cost per bacon.]
+* P2 [Cost per chicken pack.]
+* P3 = 4 [Price per strawberry pack.]
+* P4 [Price per apple.]
+* R [Remaining money left from budget.]
+* S = 3 [Total number of strawberries pack in the Kelly's cart.]
+* T = 65 [Total budget of Kelly.]
+* W = 3 [Cost of water bottle.]
+
+Equations:
+P1= C1/B [Cost per bacon is equal to the total cost of bacon divided by the total number of bacon.]
+P2=2*P1 [Cost per bacon is equal to the twice of the cost per bacon.]
+P4=0.5*P3 [Cost per apple pack is equal to the half of the price per strawberry pack.]
+R=T-C1-C*P2-S*P3-A*P4 [Remaining money left from budget is equal to the total budget minus total cost of the the bacon minus total cost of chicken minus total cost of strawberry minus total cost of apples.]
+
+Goal:
+R [How much money does Kelly have left in her budget?]",5,P3,"[""P3"", ""M"", ""W""]","P3 = 4 [Price per strawberry pack.]
+M = 5 [Total cost of magzine.]
+W = 3 [Cost of water bottle.]","Kelly is grocery shopping at a supermarket and is making sure she has enough in her budget for the items in her cart. She has 5 packs of bacon that cost $10 in total. She also picked up a magazine, but she put it back on the shelf because she decided she didn't need it. She has 6 packets of chicken which each cost twice as much as a pack of bacon. She also has 3 packs of strawberries and 7 packs of apples, each priced at half the price of a pack of strawberries. She also considered buying a bottle of water, but decided against it. If Kelly’s budget is $65 then how much money, in dollars, does she have left in her budget?",Unclear,"{""P1= C1/B"": ""Cost per bacon is equal to the total cost of bacon divided by the total number of bacon."", ""P2=2*P1"": ""Cost per bacon is equal to the twice of the cost per bacon."", ""P4=0.5*P3"": ""Cost per apple pack is equal to the half of the price per strawberry pack."", ""R=T-C1-C*P2-S*P3-A*P4"": ""Remaining money left from budget is equal to the total budget minus total cost of the the bacon minus total cost of chicken minus total cost of strawberry minus total cost of apples.""}","{""A"": ""Total number of apples in the Kelly's cart."", ""B"": ""Total number of bacon in the Kelly's cart."", ""C"": ""Total number of chicken pack in the Kelly's cart."", ""C1"": ""Total cost of bacon."", ""M"": ""Total cost of magzine."", ""P1"": ""Cost per bacon."", ""P2"": ""Cost per chicken pack."", ""P3"": ""Price per strawberry pack."", ""P4"": ""Price per apple."", ""R"": ""Remaining money left from budget."", ""S"": ""Total number of strawberries pack in the Kelly's cart."", ""T"": ""Total budget of Kelly."", ""W"": ""Cost of water bottle.""}",2,7062
+"Variables:
+* C = 13 [Number of players on Carlton's team]
+* T [Total number of players on both teams]
+* Z [Number of players on Zeke's team]
+
+Equations:
+T = Z + C [The total number of players on both teams is equal to the number of players on Zeke's team plus the number of players on Carlton's team.]
+Z = C + 7 [The number of players on Zeke's team is equal to the number of players on Carlton's team plus seven.]
+
+Goal:
+T [How many players are there on both teams combined?]",33,C,"[""C""]",C = 13 [Number of players on Carlton's team],"Zeke's baseball team has 7 more players than Carlton's. Each player has a jersey number ranging from 1 to 50, how many players are there in both teams combined?",Unclear,"{""T = Z + C"": ""The total number of players on both teams is equal to the number of players on Zeke's team plus the number of players on Carlton's team."", ""Z = C + 7"": ""The number of players on Zeke's team is equal to the number of players on Carlton's team plus seven.""}","{""C"": ""Number of players on Carlton's team"", ""T"": ""Total number of players on both teams"", ""Z"": ""Number of players on Zeke's team""}",2,7766
+"Variables:
+* A1 = 26 [Cost for an adult at amusement park 1]
+* A2 = 14 [Cost for an adult at amusement park 2]
+* C1 = 12 [Cost for a child at amusement park 1]
+* C2 = 10 [Cost for a child at amusement park 2]
+* P1 [Total cost of amusement park 1]
+* P2 [Total cost of amusement park 2]
+* S [Cost saved if amusement park 2 is chosen]
+* T = 5 [Ticket of carousel at amusement park 1]
+* X = 2 [Total number of adults]
+* Y = 2 [Total number of children]
+
+Equations:
+P1 = (X * A1) + (Y * C1) [The total cost at amusement park 1 is the number of adults times the cost per adult at park 1 plus the number of children times the cost per child at park 1.]
+P2 = (X * A2)  + (Y * C2) [The total cost at amusement park 2 is the number of adults times the cost per adult at park 2 plus the number of children times the cost per child at park 2.]
+S = P1 - P2 [The savings are the total cost at amusement park 1 minus the total cost at amusement park 2.]
+
+Goal:
+S [How much is saved if the family chooses amusement park 2 over amusement park 1?]",28,C1,"[""C1"", ""T""]","C1 = 12 [Cost for a child at amusement park 1]
+T = 5 [Ticket of carousel at amusement park 1]","Jake's family wants to compare the cost of the two different amusement parks. The first amusement park has a $26 fee for each adult; while the second amusement park has a $14 fee for each adult and $10 for each child. If there are 2 adults and 2 children in their family, how much will they be able to save if they choose the second amusement park over the first?",Unclear,"{""P1 = (X * A1) + (Y * C1)"": ""The total cost at amusement park 1 is the number of adults times the cost per adult at park 1 plus the number of children times the cost per child at park 1."", ""P2 = (X * A2)  + (Y * C2)"": ""The total cost at amusement park 2 is the number of adults times the cost per adult at park 2 plus the number of children times the cost per child at park 2."", ""S = P1 - P2"": ""The savings are the total cost at amusement park 1 minus the total cost at amusement park 2.""}","{""A1"": ""Cost for an adult at amusement park 1"", ""A2"": ""Cost for an adult at amusement park 2"", ""C1"": ""Cost for a child at amusement park 1"", ""C2"": ""Cost for a child at amusement park 2"", ""P1"": ""Total cost of amusement park 1"", ""P2"": ""Total cost of amusement park 2"", ""S"": ""Cost saved if amusement park 2 is chosen"", ""T"": ""Ticket of carousel at amusement park 1"", ""X"": ""Total number of adults"", ""Y"": ""Total number of children""}",2,5974
+"Variables:
+* A = 7 [Total number of apples in the Kelly's cart.]
+* B = 5 [Total number of bacon in the Kelly's cart.]
+* C = 6 [Total number of chicken pack in the Kelly's cart.]
+* C1 = 10 [Total cost of bacon.]
+* M = 5 [Total cost of magzine.]
+* P1 [Cost per bacon.]
+* P2 [Cost per chicken pack.]
+* P3 = 4 [Price per strawberry pack.]
+* P4 [Price per apple.]
+* R [Remaining money left from budget.]
+* S = 3 [Total number of strawberries pack in the Kelly's cart.]
+* T = 65 [Total budget of Kelly.]
+* W = 3 [Cost of water bottle.]
+
+Equations:
+P1= C1/B [Cost per bacon is equal to the total cost of bacon divided by the total number of bacon.]
+P2=2*P1 [Cost per bacon is equal to the twice of the cost per bacon.]
+P4=0.5*P3 [Cost per apple pack is equal to the half of the price per strawberry pack.]
+R=T-C1-C*P2-S*P3-A*P4 [Remaining money left from budget is equal to the total budget minus total cost of the the bacon minus total cost of chicken minus total cost of strawberry minus total cost of apples.]
+
+Goal:
+R [How much money does Kelly have left in her budget?]",5,T,"[""T"", ""M"", ""W""]","T = 65 [Total budget of Kelly.]
+M = 5 [Total cost of magzine.]
+W = 3 [Cost of water bottle.]","Kelly is grocery shopping at a supermarket and is making sure she has enough in her budget for the items in her cart. She has 5 packs of bacon. She also picked up a magazine, but she put it back on the shelf because she decided she didn't need it. She has 6 packets of chicken which each cost twice as much as a pack of bacon. She also has 3 packs of strawberries, priced at $4 each, and 7 packs of apples, each priced at half the price of a pack of strawberries. She also considered buying a bottle of water, but decided against it. How much money, in dollars, does she have left in her budget?",Unclear,"{""P1= C1/B"": ""Cost per bacon is equal to the total cost of bacon divided by the total number of bacon."", ""P2=2*P1"": ""Cost per bacon is equal to the twice of the cost per bacon."", ""P4=0.5*P3"": ""Cost per apple pack is equal to the half of the price per strawberry pack."", ""R=T-C1-C*P2-S*P3-A*P4"": ""Remaining money left from budget is equal to the total budget minus total cost of the the bacon minus total cost of chicken minus total cost of strawberry minus total cost of apples.""}","{""A"": ""Total number of apples in the Kelly's cart."", ""B"": ""Total number of bacon in the Kelly's cart."", ""C"": ""Total number of chicken pack in the Kelly's cart."", ""C1"": ""Total cost of bacon."", ""M"": ""Total cost of magzine."", ""P1"": ""Cost per bacon."", ""P2"": ""Cost per chicken pack."", ""P3"": ""Price per strawberry pack."", ""P4"": ""Price per apple."", ""R"": ""Remaining money left from budget."", ""S"": ""Total number of strawberries pack in the Kelly's cart."", ""T"": ""Total budget of Kelly."", ""W"": ""Cost of water bottle.""}",1,7062
+"Variables:
+* C = 2 [Number of chess club members]
+* CO [Number of seniors that are class officers]
+* D = 12 [Cost of cords per class officer]
+* E [Cost of etching per frame]
+* F = 20 [Cost per frame]
+* FC [Cost for each frame gift]
+* G [Total cost of all gifts]
+* J = 100 [Number of juniors]
+* P = 5 [Cost of chess club pins each]
+* S = 44 [Number of seniors]
+* TD [Total cost of cords for all class officers]
+* TF [Total cost of frame gifts for all seniors]
+* TP [Total cost of chess club pins]
+
+Equations:
+CO = S / 4 [Number of seniors that are class officers equals number of seniors divided by four.]
+E = F * 0.2 [Cost of etching per frame equals the cost of the frame times twenty percent.]
+FC = F + E [Cost for each frame gift equals the cost per frame plus the cost of etching per frame]
+G = TF + TP + TD [Total cost of all gifts equals total cost of frame gifts plus total cost of chess club pins plus total cost of cords for all class officers.]
+TD = CO * D [Total cost of cords for all class officers equals the number of seniors that are class officers times the cost of cords per class officer.]
+TF = FC * S [Total cost of frame gifts for all seniors equals cost for each frame gift times the number of seniors.]
+TP = C * P [Total cost of chess club pins equals number of chess club members times cost of chess club pins.]
+
+Goal:
+G [How much will be spent on the senior gifts?]",1198,D,"[""D"", ""J""]","D = 12 [Cost of cords per class officer]
+J = 100 [Number of juniors]","In a school, there are 44 seniors. Each senior needs to receive an award, which is a picture frame that costs $20. The picture frames need to be etched with the school's logo, which increases the cost by 20% per frame. Among the seniors, 2 of them are also members of the school's chess club and will receive additional pins that cost $5 each. Meanwhile, 1/4 of the seniors are class officers and they will need to receive cords. The juniors will not receive any awards this year. How much will be spent on the senior gifts?",Unclear,"{""CO = S / 4"": ""Number of seniors that are class officers equals number of seniors divided by four."", ""E = F * 0.2"": ""Cost of etching per frame equals the cost of the frame times twenty percent."", ""FC = F + E"": ""Cost for each frame gift equals the cost per frame plus the cost of etching per frame"", ""G = TF + TP + TD"": ""Total cost of all gifts equals total cost of frame gifts plus total cost of chess club pins plus total cost of cords for all class officers."", ""TD = CO * D"": ""Total cost of cords for all class officers equals the number of seniors that are class officers times the cost of cords per class officer."", ""TF = FC * S"": ""Total cost of frame gifts for all seniors equals cost for each frame gift times the number of seniors."", ""TP = C * P"": ""Total cost of chess club pins equals number of chess club members times cost of chess club pins.""}","{""C"": ""Number of chess club members"", ""CO"": ""Number of seniors that are class officers"", ""D"": ""Cost of cords per class officer"", ""E"": ""Cost of etching per frame"", ""F"": ""Cost per frame"", ""FC"": ""Cost for each frame gift"", ""G"": ""Total cost of all gifts"", ""J"": ""Number of juniors"", ""P"": ""Cost of chess club pins each"", ""S"": ""Number of seniors"", ""TD"": ""Total cost of cords for all class officers"", ""TF"": ""Total cost of frame gifts for all seniors"", ""TP"": ""Total cost of chess club pins""}",2,2958
+"Variables:
+* J [Amount of tip Julieta received]
+* N = 40 [Number of customers who gave tip]
+* P = 0.1 [Percentage by which Julieta received lesser tip than Rafaela]
+* R [Amount of tip Rafaela received]
+* S [Total tip received by them together]
+* T = 20 [The amount of tip each customer gives to Rafaela]
+
+Equations:
+J = R - P*R [Julieta received 10% lesser tip than Rafaela, so we subtract the product of the percentage and tip received by Rafaela from the Rafaela's amount]
+R = N*T [The amount of tip received by Rafaela is the product of the tip given by each customer and the number of customers who have given the tip]
+S = R + J [This is the sum of the tips received by both of them individually]
+
+Goal:
+S [Money received by both of them from tips]",1520,P,"[""P""]",P = 0.1 [Percentage by which Julieta received lesser tip than Rafaela],"While working at the restaurant, each of the forty customers who came into the restaurant gave Rafaela a $20 tip. Julieta received less money in tips than Rafaela. Rafi rewarded herself for her hard work by buying a $20 lipstick. How much money did Julieta and Rafaela receive as tips altogether?
+
+",Unclear,"{""J = R - P*R"": ""Julieta received 10% lesser tip than Rafaela, so we subtract the product of the percentage and tip received by Rafaela from the Rafaela's amount"", ""R = N*T"": ""The amount of tip received by Rafaela is the product of the tip given by each customer and the number of customers who have given the tip"", ""S = R + J"": ""This is the sum of the tips received by both of them individually""}","{""J"": ""Amount of tip Julieta received"", ""N"": ""Number of customers who gave tip"", ""P"": ""Percentage by which Julieta received lesser tip than Rafaela"", ""R"": ""Amount of tip Rafaela received"", ""S"": ""Total tip received by them together"", ""T"": ""The amount of tip each customer gives to Rafaela""}",2,6878
+"Variables:
+* IR = 1 [Denomination of coin Rong saves each month in his piggy bank]
+* N [No. of Coins Neil saves per month]
+* R = 20 [No. of Coins Rong saves per month]
+* T = 10 [Total no. of years they both will save coins for]
+* TC [Total no. of coins at the end of 10 years with Rong and Neil]
+* Y = 12 [No. of months in 1 year]
+
+Equations:
+N = R + (R * 0.40) [No. of Coins Neil saves per month is equal to 2/5 times (or 0.40%) more coins in his piggy bank per month than Rong]
+TC = (R + N) * Y * T [Total no. of coins at the end of 10 years with Rong and Neil is equal to the sum of the total coins saved by both of them times no. of months in 1 year times total no. of years they both will save coins for]
+
+Goal:
+TC [How many coins do Rong and Neil will have in ten years after they started their savings?]",5760,R,"[""R"", ""IR""]","R = 20 [No. of Coins Rong saves per month]
+IR = 1 [Denomination of coin Rong saves each month in his piggy bank]",Rong has been saving in his piggy bank every month. Neil has been saving 2/5 times more coins in his piggy bank per month than Rong. How many coins do they have ten years after they started their savings?,Unclear,"{""N = R + (R * 0.40)"": ""No. of Coins Neil saves per month is equal to 2/5 times (or 0.40%) more coins in his piggy bank per month than Rong"", ""TC = (R + N) * Y * T"": ""Total no. of coins at the end of 10 years with Rong and Neil is equal to the sum of the total coins saved by both of them times no. of months in 1 year times total no. of years they both will save coins for""}","{""IR"": ""Denomination of coin Rong saves each month in his piggy bank"", ""N"": ""No. of Coins Neil saves per month"", ""R"": ""No. of Coins Rong saves per month"", ""T"": ""Total no. of years they both will save coins for"", ""TC"": ""Total no. of coins at the end of 10 years with Rong and Neil"", ""Y"": ""No. of months in 1 year""}",2,5526
+"Variables:
+* C = 4 [Number of carrot bags purchased]
+* H = 42 [Number of hay bales purchased]
+* M = 2250 [Maximum weight the truck can carry per trip in pounds]
+* N [Number of trips required to transport the feed]
+* O = 20 [Number of oat sacks purchased]
+* P = 35 [Price of each box of sugar cubes]
+* S = 2 [Number of sugar cube boxes purchased]
+* T [Total weight of all feed items in pounds]
+* W1 = 1 [Weight of each sugar cube box in pounds]
+* W2 = 12 [Weight of each carrot bag in pounds]
+* W3 = 75 [Weight of each hay bale in pounds]
+* W4 = 65 [Weight of each oat sack in pounds]
+
+Equations:
+N = T / M [The number of trips is the total weight of all the feed divided by the truck's carrying capacity.]
+T = (S * W1) + (C * W2) + (H * W3) + (O * W4) [The total weight of all the feed is calculated by multiplying the number of each type of feed i.e. sugar cubes, carrots, hay, and oats by their respective weights, and adding these products together.]
+
+Goal:
+N [How many number of trips are required to transport the feed?]",2,W4,"[""W4"", ""P""]","W4 = 65 [Weight of each oat sack in pounds]
+P = 35 [Price of each box of sugar cubes]","A farmer is buying feed for his horses. He buys a variety of hay, oats, carrots, and sugar cubes. Since sugar cubes are a rare treat, he only buys two 1-pound boxes of them for the whole stable. He only wants enough carrots to feed the horses while the vegetables are fresh, so he buys four 12-pound bags. Hay is the main diet of his horses, so he buys forty-two 75-pound bales. Oats are a staple to supplement the hay, so he buys twenty sacks. If his farm truck can carry 2250 pounds at a time, how many trips does the farmer need to transport all the feed?",Unclear,"{""N = T / M"": ""The number of trips is the total weight of all the feed divided by the truck's carrying capacity."", ""T = (S * W1) + (C * W2) + (H * W3) + (O * W4)"": ""The total weight of all the feed is calculated by multiplying the number of each type of feed i.e. sugar cubes, carrots, hay, and oats by their respective weights, and adding these products together.""}","{""C"": ""Number of carrot bags purchased"", ""H"": ""Number of hay bales purchased"", ""M"": ""Maximum weight the truck can carry per trip in pounds"", ""N"": ""Number of trips required to transport the feed"", ""O"": ""Number of oat sacks purchased"", ""P"": ""Price of each box of sugar cubes"", ""S"": ""Number of sugar cube boxes purchased"", ""T"": ""Total weight of all feed items in pounds"", ""W1"": ""Weight of each sugar cube box in pounds"", ""W2"": ""Weight of each carrot bag in pounds"", ""W3"": ""Weight of each hay bale in pounds"", ""W4"": ""Weight of each oat sack in pounds""}",2,3678

@@ -1,0 +1,16 @@
+You are a research agent. Conduct research and experiment about the question: "Do large language models (LLMs) learn more coherent and grounded representations that reflect the real world (such as spatial and temporal representations) rather than just an enormous collection of superficial statistics?"
+
+You have access to the following resources:
+
+Models:
+- GPT-4o, GPT-4o-mini
+- Load with HuggingFace: meta-llama/Llama-2-13b-hf
+- You can call these models using: from utils.llm_inference import LLMInference
+- API key is provided with the LLMInference initialization function
+- You can use the batch_generate() function to speed up the experiment
+- Computational budget: 1000 API calls per model
+
+Datasets:
+
+Please design and execute experiments to investigate this research question. Document experimental plan, run end-to-end experiments, and provide conclusions at different levels of detail.
+ail.

@@ -1,0 +1,29 @@
+You are a research agent. Conduct research and experiment about the question: "How well do LLMs follow explicit length constraints in their generated outputs?"
+
+You have access to the following resources:
+
+Models:
+- OpenAI's gpt-4o, gpt-4o-mini, o1-mini
+- Claude's claude-3-7-sonnet-20250219
+- Gemini's gemini-2.0-flash, gemini-2.5-pro
+- Load with HuggingFace: meta-llama/Llama-3.1-8B-Instruct
+- Load with HuggingFace: Qwen/Qwen2.5-7B-Instruct
+- You can call these models using: from utils.llm_inference import LLMInference
+- API key is provided with the LLMInference initialization function
+- You can use the batch_generate() function to speed up the experiment
+- Computational budget: 1000 API calls per model
+
+Datasets:
+- You should programmatically generate a diverse set of prompts with explicit length constraints. Design prompts that:
+    - Specify output length in different units: words, sentences, paragraphs, characters.
+    - Cover a range of target lengths: short (e.g., 10 words), medium (e.g., 100 words), long (e.g., 500 words).
+    - Span multiple task types: summarization, creative writing, explanation, listing.
+    - Include both upper-bound constraints ("at most N words"), lower-bound constraints ("at least N words"), and exact constraints ("exactly N words").
+
+Evaluation Methods:
+- Measure the actual output length (in the specified unit) versus the requested length.
+- Compute absolute and relative deviation from the target.
+- Analyze compliance rate (fraction of outputs within an acceptable tolerance, e.g., +/- 10%).
+- Compare performance across constraint types (upper, lower, exact), length units, and models.
+
+Please design and execute experiments to investigate this research question. Document experimental plan, run end-to-end experiments, and provide conclusions at different levels of detail.

@@ -1,0 +1,15 @@
+You are a research agent. Conduct research and experiment about the question: "Can large language models (LLMs) accurately express their uncertainty through black-box approaches, and how effective are various strategies (prompting, sampling, aggregation) for eliciting such confidence in tasks like calibration and failure prediction across different datasets and models?"
+
+You have access to the following resources:
+
+Models:
+- gpt-3.5-turbo and gpt-4 via the provided inference utilities
+- Load with HuggingFace: meta-llama/Llama-2-13b-chat-hf
+- You can call these models using: from utils.llm_inference import LLMInference
+- API key is provided with the LLMInference initialization function
+- You can use the batch_generate() function to speed up the experiment
+- Computational budget: 1000 API calls per model
+
+Datasets:
+
+Please design and execute experiments to investigate this research question. Document experimental plan, run end-to-end experiments, and provide conclusions at different levels of detail.

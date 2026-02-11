@@ -1,0 +1,66 @@
+You are a research agent. Conduct research and experiment about the question: "Does chain-of-thought (CoT) prompting truly enable large language models (LLMs) to learn generalizable algorithmic reasoning abilities, or does it merely rely on highly specific, pattern-matching prompts?"
+
+You have access to the following resources:
+
+Models:
+- gpt-3.5-turbo and gpt-4-turbo via the provided inference utilities
+- You can call these models using: from utils.llm_inference import LLMInference
+- API key is provided with the LLMInference initialization function
+- You can use the batch_generate() function to speed up the experiment
+- Computational budget: 10000 API calls per model
+
+Datasets:
+You must programmatically generate all data needed for this study. Your generated data should allow you to:
+
+- Evaluate classical planning abilities in a Blocksworld-style domain.
+- Evaluate synthetic reasoning abilities on at least three distinct tasks, such as:
+    - Parity tracking (e.g., coin flip sequences),
+    - String manipulation (e.g., letter extraction/concatenation from words),
+    - Multi-step arithmetic (e.g., simplifying arithmetic expressions).
+You must define the formats, generators, and difficulty ranges yourself, but they should satisfy the following high-level requirements.
+
+1. Blocksworld Planning Tasks
+
+Design a simple Blocksworld-like environment where:
+- There are multiple blocks that can be stacked on top of each other or placed on a table.
+- Each instance is described by:
+    - An initial configuration of blocks,
+    - A goal configuration of blocks.
+
+The solution to an instance is a sequence of valid actions (a plan) that transforms the initial state into the goal state.
+
+You must:
+
+Create a procedural generator that can produce many independent problem instances.
+Ensure you can vary problem complexity, for example by:
+Changing the number of blocks,
+Varying how entangled or simple the stacks are,
+Including both “easier” and “harder” subclasses of problems (e.g., all blocks on the table vs. arbitrary stacks).
+
+Define a machine-checkable criterion to determine whether a model-produced plan is valid and achieves the goal (e.g., by simulating actions or using a simple state-transition checker you implement).
+
+2. Synthetic Reasoning Tasks
+
+You must design and generate at least three families of synthetic reasoning tasks. Each family should:
+Be scalable in difficulty (e.g., by increasing length, depth, or number of operations).
+Have a clear, unambiguous ground-truth answer that you can compute algorithmically when generating the data.
+Examples of suitable task families include:
+
+a. Parity / State-Tracking Task
+Natural-language description of a sequence of operations (such as flipping or not flipping a coin).
+The answer depends on composed effects of all operations (e.g., whether the coin ends up heads or tails).
+Difficulty control: number of operations or steps in the description.
+
+b. String Manipulation Task
+Instructions to transform a list or phrase of words into a target string (e.g., extracting certain letters and concatenating them).
+Difficulty control: number of words, complexity of the transformation rule.
+
+c. Multi-step Arithmetic Task
+Parenthesized arithmetic expressions over small integers using basic operators.
+The correct answer is a number that you can compute programmatically.
+Difficulty control: number of operations, level of nesting, or total expression length.
+You are free to design the exact rules, templates, and difficulty scales, as long as they support a systematic study of:
+Increased reasoning depth / complexity, and Generalization across related but non-identical input patterns.
+
+
+Please design and execute experiments to investigate this research question. Document your experimental plan, run **FULL** experiments, and provide conclusions at different levels of detail.

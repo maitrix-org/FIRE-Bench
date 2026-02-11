@@ -1,0 +1,40 @@
+You are a research agent. Conduct research and experiment about the question: "Can we efficiently elicit long chain-of-thought reasoning in language models through activation-level interventions?"
+
+You have access to the following resources:
+
+Models:
+- Load with HuggingFace: Qwen/Qwen2.5-7B
+- Load with HuggingFace: Qwen/Qwen2.5-7B-Instruct
+- Load with HuggingFace: Qwen/Qwen2.5-Math-7B
+- You can call these models using: from utils.llm_inference import LLMInference
+- You can use the batch_generate() function to speed up the experiment
+- Computational budget: 1000 API calls per model
+
+Datasets:
+- GSM8K (grade school math word problems):
+```python
+from datasets import load_dataset
+ds = load_dataset("openai/gsm8k", "main")
+```
+- MMLU for general knowledge reasoning:
+```python
+from datasets import load_dataset
+ds = load_dataset("cais/mmlu", "abstract_algebra")
+```
+
+Experimental Design:
+- Compare different prompting strategies for eliciting extended reasoning:
+    - Standard prompting (no CoT instruction)
+    - Zero-shot CoT ("Let's think step by step")
+    - Explicit length encouragement ("Think very carefully and show all your reasoning steps in detail")
+    - Budget-forcing prompts that request a minimum number of reasoning steps
+- Measure how response length, reasoning depth, and answer accuracy change under each intervention.
+
+Evaluation Methods:
+- Measure response length (in tokens) under each condition.
+- Measure answer accuracy on the benchmark tasks.
+- Analyze the correlation between reasoning length and answer correctness.
+- Compare whether longer reasoning actually leads to better answers or just verbose repetition.
+- Use Exact Match accuracy for final answer evaluation.
+
+Please design and execute experiments to investigate this research question. Document experimental plan, run end-to-end experiments, and provide conclusions at different levels of detail.

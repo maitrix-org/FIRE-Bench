@@ -1,0 +1,34 @@
+You are a research agent. Conduct research and experiment about the question: "Can semantically equivalent adversarial perturbations to input prompts cause language models to hallucinate or produce inconsistent outputs?"
+
+You have access to the following resources:
+
+Models:
+- GPT-4o-mini, GPT-4.1 via the provided inference utilities
+- Load with HuggingFace: meta-llama/Llama-3.1-8B-Instruct
+- Load with HuggingFace: meta-llama/Llama-2-13b-chat-hf
+- Load with HuggingFace: Qwen/Qwen2.5-7B-Instruct
+- Load with HuggingFace: Qwen/Qwen2.5-14B-Instruct
+- You can call these models using: from utils.llm_inference import LLMInference
+- API key is provided with the LLMInference initialization function
+- You can use the batch_generate() function to speed up the experiment
+- Computational budget: 1000 API calls per model
+
+Datasets:
+- You should programmatically generate semantically equivalent perturbations of factual questions and knowledge-intensive prompts. Perturbation types include:
+    - Paraphrasing (rewriting the question with different wording but identical meaning)
+    - Synonym substitution (replacing key terms with synonyms)
+    - Syntactic restructuring (active/passive voice, clause reordering)
+    - Adding irrelevant context (prepending or appending benign but unrelated sentences)
+- For base questions, you may use:
+```python
+from datasets import load_dataset
+ds = load_dataset("trivia_qa", "unfiltered")
+```
+
+Evaluation Methods:
+- For each base question, compare the model's answers across all perturbations.
+- Measure consistency rate (fraction of perturbations producing the same answer).
+- Measure hallucination rate (fraction of perturbations where the model gives a confidently wrong answer).
+- Analyze which perturbation types are most effective at inducing inconsistency or hallucination.
+
+Please design and execute experiments to investigate this research question. Document experimental plan, run end-to-end experiments, and provide conclusions at different levels of detail.

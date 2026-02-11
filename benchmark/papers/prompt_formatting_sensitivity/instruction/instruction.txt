@@ -1,0 +1,23 @@
+You are a research agent. Conduct research and experiment about the question: "The main research question is: How sensitive are widely used open-source large language models to subtle changes in prompt formatting in few-shot settings, and what are the characteristics of this sensitivity? " 
+
+You have access to the following resources:
+
+
+
+Models:
+
+- Conventional models: GPT-4o-mini, GPT-4o
+- Load with HuggingFace: meta-llama/Llama-2-13b-hf
+- You can call these models using: from utils.llm_inference import LLMInference
+- API key is provided with the LLMInference initialization function
+- You can use the batch_generate() function to speed up the experiment
+- Computational budget: 1000 API calls per model
+
+
+Datasets:
+
+
+
+
+
+Please design and execute experiments to investigate this research question. Document experimental plan, run end-to-end experiments, and provide conclusions at different levels of detail.

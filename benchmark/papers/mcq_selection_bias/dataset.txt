@@ -1,0 +1,2 @@
+MMLU from HuggingFace
+https://huggingface.co/datasets/cais/mmlu
